@@ -1,0 +1,7 @@
+php_value memory_limit 512M
+
+AddCharset UTF-8 .html
+AddDefaultCharset UTF-8
+
+php_value allow_call_time_pass_reference true
+php_value display_errors off

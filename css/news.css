@@ -1,0 +1,329 @@
+#content #press-list {
+   position: relative;
+}
+
+#content #press-list #press-filter{
+	width: 170px;
+	float: right;
+	background: none repeat scroll 0 0 white;
+	z-index: 9;
+}
+
+#content #press-list #press-articles {
+	margin-right: 215px;
+}
+#content #press-list:not(.news) #press-articles {
+	margin-right: 0px;
+}
+#content #press-list #press-filter .year span{
+	font-size: 14px;
+	font-family: 'Helvetica';
+	text-transform: uppercase;
+	font-weight: bold;
+	padding: 0 21px;
+}
+#content #press-list #press-filter .year {
+	padding: 20px;
+	background-color: #efebdf;
+	margin-top:20px;
+	text-align: center;
+}
+#content #press-list #press-filter .label {
+	font-size: 10px;
+	font-family: 'Helvetica';
+	text-transform: uppercase;
+	margin-bottom: 10px;
+}
+#content #press-list #press-filter .ik_select {
+	width: 100% !important;
+}
+#content #press-list #press-filter .months {
+
+}
+#content #press-list #press-filter .months .month a{
+	padding: 10px 17px;
+	display: block;
+	text-decoration: none;
+	font-size: 12px;
+	font-family: 'Helvetica';
+	text-transform: uppercase;
+	font-weight: bold;
+	color: #252525;
+}
+#content .nocontent{
+	font-size:20px;
+	color:#686868;
+	text-align:center
+}
+#content #press-list #press-filter .months .month a:hover , #content #press-list #press-filter .months .month a:hover span,
+#content #press-list #press-filter .months .month a.active , #content #press-list #press-filter .months .month a.active span{
+	background-color: #257ac7;
+	color: #fff;
+}
+
+#content #press-list #press-filter .months .month a span {
+	color: #686868;
+	font-size: 10px;
+	font-family: 'Helvetica';
+	padding-left: 3px;
+	vertical-align: 1px;
+}
+#content #press-list #press-articles .subtitle {
+	color: #686868;
+	font-size: 12px;
+	font-family: 'Helvetica';
+	text-transform: uppercase;
+	font-weight: bold;
+	text-align: center;
+	border-top: 1px solid #e8e8e8;
+	padding: 15px 0;
+	margin-top: 15px;
+}
+#content #press-list #press-articles .subtitle:first-child{
+	padding: 0 0 15px;
+	border-top: none;
+	margin-top: 0px;
+}
+#content #press-list #press-articles > article {
+ 	padding: 20px;
+	background-color: #f7f7f7;
+}
+#content #press-list #press-articles > article + article {
+	margin-top: 10px;
+}
+#content #press-list #press-articles > article .pic{
+	width: 160px;
+	height: 133px;
+	overflow: hidden;
+	position: relative;
+	float: left;
+}
+#content #press-list #press-articles > article .pic:after{
+	position: absolute;
+	height: 133px;
+	width: 11px;
+	background-image: url(//cdn.vostok.ru/images/layout/mask-arrow.png);
+	content: "";
+	right: 0;
+	top: 0;
+	bottom: 0;
+	background-position: right top;
+	background-repeat: no-repeat;
+}
+#content #press-list #press-articles > article .content{
+	margin-left: 190px;
+	min-height: 140px;
+}
+#content #press-list #press-articles > article.nopic .content{
+	margin-left: 0px;
+}
+#content #press-list #press-articles > article .content .title {
+	font-size: 18px;
+	font-family: 'Helvetica';
+	text-transform: uppercase;
+	font-weight: bold;
+	color:#1266b1;
+	margin-bottom: 20px;
+
+}
+#content #press-list #press-articles > article .content .title a {
+	text-decoration: none;
+	line-height: 18px;
+}
+#content #press-list #press-articles > article .content .description{
+	color:#686868;
+	font-size: 12px;
+	font-family: 'Helvetica';
+	padding-bottom: 16px;
+	margin-bottom: 20px;
+	border-bottom:1px solid #e2e2e2;
+	line-height: 20px;
+
+}
+#content #press-list #press-articles > article .content .date{
+	color:#686868;
+	font-size: 10px;
+	font-family: 'Helvetica';
+	text-transform: uppercase;
+}
+
+#content #press-filter-collapser {
+	cursor: pointer;
+	display: none;
+	height: 100px;
+	right: -20px;
+	position: absolute;
+	top: 0px;
+	width: 40px;
+	z-index: 10;
+}
+#content #press-filter-collapser.active > div {
+	background-color: #FF6F02;
+	background-image: url("/images/layout/ico_collapse.png");
+
+}
+#content #press-filter-collapser > div {
+	background-color: #1266B1;
+	background-image: url("/images/layout/ico_collapse_back.png");
+	background-position: center center;
+	background-repeat: no-repeat;
+	height: 40px;
+	width: 40px;
+}
+
+#content #press-filter-collapser > span {
+	background-color: #FFFFFF;
+	background-image: url("/images/layout/podbor3.png");
+	background-position: center center;
+	background-repeat: no-repeat;
+	display: inline-block;
+	height: 150px;
+	width: 40px;
+}
+
+#content #press-filter #cancel-filter {
+	background-color: #F7F7F7;
+	display: none;
+	position: relative;
+	text-align: center;
+}
+
+#content #press-filter #cancel-filter a {
+	display: inline-block;
+	font-family: 'Helvetica';
+	font-size: 10px;
+	font-weight: bold;
+	padding: 15px 10px;
+	text-decoration: none;
+	text-transform: uppercase;
+}
+#content header .description.pd, .user-content header .description.pd{
+	background-color: #f7f7f7;
+	padding: 30px 35px;
+}
+.user-content .ext-link-block{
+	margin-top: 45px;
+}
+#content #inform-products {
+	margin-top: 45px;
+	margin-bottom: 60px;
+}
+#content #inform-products > header{
+	background-color: #257ac7;
+	border-bottom: 4px solid #216eb3;
+	text-align: center;
+	padding: 15px;
+	font-size: 14px;
+	font-weight: bold;
+	text-transform: uppercase;
+	font-family: 'Helvetica';
+	color: #fff;
+}
+/* 768 */
+
+._768 #content #press-list #press-articles{
+	margin-right: 40px;
+}
+._768 #content #press-list #press-filter{
+	float: none;
+	padding: 5px;
+	position: absolute;
+	display: none;
+	right: -21px;
+	width: 170px;
+	border: 1px solid #EFEFEF;
+	padding: 10px 65px 10px 10px;
+}
+._768 #content #press-filter-collapser {
+	display: block;
+}
+
+/* 480 */
+._480 #content #press-list #press-articles{
+	margin-right: 0px;
+	padding-top: 50px;
+}
+._480 #content #press-list #press-articles > article  {
+	text-align: center;
+}
+._480 #content #press-list #press-articles > article .pic{
+	width: 160px;
+	height: 133px;
+	overflow: hidden;
+	position: relative;
+	display: inline-block;
+	float: none;
+}
+._480 #content #press-list #press-articles > article .pic:after{
+	position: absolute;
+	height: 11px;
+	width: 160px;
+	background-image: url(/images/layout/mask-arrow2.png);
+	content: "";
+	right: 0;
+	left: 0;
+	bottom: 0;
+	top:auto;
+	background-position: center bottom;
+	background-repeat: no-repeat;
+}
+._480 #content #press-list #press-articles > article .content{
+	margin-left: 0px;
+	margin-top: 10px;
+	width: 100%;
+	text-align: left;
+}
+._480 #content #press-list #press-articles .subtitle:first-child{
+	border-top: 1px solid #e8e8e8;
+	padding: 15px 0;
+}
+._480 #content #press-filter-collapser > span {
+	background-image: url("/images/layout/podbor4.png");
+	height: 40px;
+	width: 155px;
+	background-color: transparent;
+}
+._480 #content #press-filter-collapser > div {
+	float: right;
+	background-image: url(/images/layout/ico_collapse_down.png);
+}
+._480 #content #press-filter-collapser.active > div{
+	background-image: url(/images/layout/ico_collapse_up.png);
+}
+._480 #content #press-filter-collapser {
+	width:200px;
+}
+._360 #content #press-filter-collapser{
+	right: -10px;
+}
+._480 #content #press-list #press-filter {
+	padding: 45px 14px 10px;
+}
+
+.virtual_pager > a, .virtual_pager > span {
+    width:auto!important;
+    padding: 0 10px;
+}
+
+.virtual_pager > span {
+background-image: url("//cdn.vostok.ru/images/layout/pager-active.png");
+background-position: 50% 0;
+background-repeat: no-repeat;
+color: white;
+margin: 0 -4px;
+position: relative;
+width: 36px!important;
+cursor: default;
+}
+
+.breadcrumbs span {
+color: #9b9b9b!important;
+font-size: 11px!important;
+font-weight: normal!important;
+line-height: 18px!important;
+}
+
+.breadcrumbs.news{
+    top: 4px!important;
+    z-index: 9;
+}

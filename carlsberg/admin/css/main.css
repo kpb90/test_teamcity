@@ -1,0 +1,382 @@
+*
+{
+	font-size:14px;	
+}
+table td
+{
+	/*text-align:center;*/
+	vertical-align:middle!important;
+}
+#photos_main-list .x-grid3-row-selected, #comments-list .x-grid3-row-selected
+{
+	background-color: #008000!important;
+	color: #FFFFFF;
+}
+.x-btn-text-icon .x-btn-icon-small-left .x-btn-text
+{
+	  background-position: 0 center;
+    background-repeat: no-repeat;
+    font-size: 16px;
+    height: 21px;
+    padding-left: 18px;
+}
+html,body {
+	font-family: verdana,tahoma,arial,helvetica,sans-serif !important;		
+	padding: 0; margin: 0;
+	height: 100%; width: 100%;
+}
+
+div#header, div#container , #login-form, div#container_main {
+	align: center;
+	text-align: left;	
+	margin-left: auto;
+	margin-right: auto;
+	overflow: visible;	
+}
+
+div#header, div#header_main{
+	width: 100%;
+	height: 33px;				
+	background: transparent url(../images/header.jpg) repeat-x;
+	color:#3A538B !important;
+	font-size:11px;
+	text-align: right;
+}
+
+div#head_right {
+	position:absolute;
+	top:20px;
+	right:20px;
+	font-size:11px;	
+}
+div#header_text{	
+	text-align:center;
+	width:550px;
+	font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;
+	font-size: 16px;
+	font-weight: bold;
+	color: #003366;
+	margin-left: auto;
+  	margin-right: auto;
+	padding-top:8px;
+}
+
+div#header_main{
+	width: 1024px;
+	background: transparent url(../images/octa_t3.jpg) repeat-x;
+}
+
+div#container{
+	width: 100%;
+	left:20px;
+	position: absolute;
+	top:60px;	
+	width: 98%;
+	height: 87%;			
+}
+
+div#container_main2{
+	left:0;
+	margin-top:-250px;
+	position: absolute;
+	top:50%;	
+	width:100%;
+	height: 100%;
+	display:block;
+}
+
+div#container_3{
+
+	margin-left:auto;
+	margin-right:auto;
+	width:819px;
+	height: 281px;
+/*	background: transparent url(../images/enter.gif) no-repeat; */
+	display:block;
+}
+
+
+div#container_4{
+	width: 100%;
+	height: 100%;
+}
+
+#login-form{	
+	width:270px;	
+	padding-top: 150px;
+	
+	padding-left: 0px;
+}
+.label-style {
+	font-family: verdana,tahoma,arial,helvetica,sans-serif !important;	
+	font-size:14px;
+	font-weight:bold;
+	padding-bottom: 5px;
+}
+
+div#content {
+	padding-top:10px;
+
+	width: 100%; 	
+}	
+
+
+
+div#code {
+	margin-left:auto;
+	margin-right:auto;
+	width: 100%;
+}
+
+div#object-info {
+	width: 790px;
+	height:100%;
+	border: 1px solid #99BBE8;
+	font-size:12px;	
+}
+
+div#obj-header {
+	font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 15px;
+    margin-top:10px;
+    margin-left:10px;    
+    width: 610px;
+}
+
+div#navigation{
+	width: 150px
+}	
+
+div#header a{
+	color: #003366 !important;
+	margin-right: 30px;
+}
+#head_right{
+	margin-top: -13px; 
+}
+
+#login-form .label-style{
+	padding-bottom: 10px;
+}
+
+div#menu-main {	
+	position:relative;
+	width:100%;
+	height:26px;
+	background-color: #2C5F93;
+	margin-top:3px;
+	z-index:2;
+}
+
+div#center-menu {
+	margin-left:20px;	
+	position:relative;	
+}
+
+
+
+.x-grid3-cell-inner, .x-grid3-hd-inner { 
+	white-space:normal !important; 
+	table-layout:auto;
+}
+.x-grid3-hd-inner {
+	font-weight:bold;
+}
+
+/* Override standard grid styles (add colour to vertical grid lines) */
+.x-grid3-col {
+    border-left:  1px solid #EEEEEE;
+    border-right: 1px solid #D2D2D2;
+}
+ 
+/* Also remove padding from table data (to compensate for added grid lines) */
+.x-grid3-row td, .x-grid3-summary-row td {
+    padding-left: 0px;
+    padding-right: 0px;
+}
+
+.x-grid3-row-alt {
+/*	background-color: lightgrey; */
+	background-color: RGB(230,230,230); 
+}
+
+.x-grid-dirty-cell {
+     background-image:none;
+}
+
+.x-panel-footer {
+	background-color:RGB(195,212,250);
+}
+
+.x-combo-list-item {
+	height:14px;
+}
+
+
+#tree-panel .x-tree-node-el{
+	height: 22px;
+}
+
+#tree-panel .x-tree-node{
+	font-size: 12px;
+}
+#tree-panel .x-tree-node {
+   
+    font: 12px arial,tahoma,helvetica,sans-serif;
+    white-space: nowrap;
+}
+
+.upload-icon {
+	background: url(../images/image.png) no-repeat 0 0 !important;
+}
+
+.x-form-file-wrap {
+    position: relative;
+    height: 22px;
+}
+.x-form-file-wrap .x-form-file {
+	position: absolute;
+	right: 0;
+	-moz-opacity: 0;
+	filter:alpha(opacity: 0);
+	opacity: 0;
+	z-index: 2;
+    height: 22px;
+}
+.x-form-file-wrap .x-form-file-btn {
+	position: absolute;
+	right: 0;
+	z-index: 1;
+}
+.x-form-file-wrap .x-form-file-text {
+    position: absolute;
+    left: 0;
+    z-index: 3;
+    color: #777;
+}
+.x-selectable, .x-selectable * {
+	-moz-user-select: text!important;
+	-khtml-user-select: text!important;
+}
+
+#images-view .x-panel-body{
+	background: white;
+	font: 11px Arial, Helvetica, sans-serif;
+}
+#images-view .thumb{
+	background: #dddddd;
+	padding: 3px;
+}
+#images-view .thumb-wrap img{	   
+    border-top: 1px solid #cccccc;
+    border-left: 1px solid #cccccc; 
+    border-right: 1px solid #cccccc; 
+    border-bottom: 1px solid #cccccc;	
+    max-height:80px;
+}
+#images-view .thumb-wrap{
+	float: left;
+	margin: 4px;
+	margin-right: 0;
+	padding: 5px;
+	height:80px;
+
+}
+#images-view .thumb-wrap span{
+	display: block;
+	overflow: hidden;
+	text-align: center;
+}
+
+#images-view .x-view-over{
+    border:1px solid #dddddd;
+    background: #efefef url(../ext/resources/images/default/grid/row-over.gif) repeat-x left top;
+	padding: 4px;
+  	
+}
+
+#images-view .x-view-selected{
+	background: #eff5fb url(images/selected.gif) no-repeat right bottom;
+	border:1px solid #99bbe8;
+	padding: 4px;	
+}
+#images-view .x-view-selected .thumb{
+	background:transparent;
+}
+
+.upload-icon {
+	background: url(../images/image.png) no-repeat 0 0 !important;
+ }
+ 
+.delete-icon {
+	background: url(../images/delete.gif) no-repeat 0 0 !important;
+ }
+
+.first-icon {
+	background: url(../images/first.png) no-repeat 0 0 !important;
+}
+
+#text-btn2_generate
+{
+	margin-left:80px;
+}
+
+.green_light
+{
+	background-color:green;
+	color:white;
+}
+
+.no_green_light
+{
+	background-color:none;
+}
+
+able.org-table {
+	padding-top:20px;	
+	border-collapse: collapse;
+	border-spacing: 0px;
+	margin-left: 20px;	
+}
+
+td.org-table-key {
+	font-weight: bold;
+	background-color: #CCC;	
+	padding: 4px;
+	border: 1px #fff solid;
+	width:250px;
+}
+
+td.org-table-value {
+	font-weight: normal;
+	background-color: #E8E8E8;
+	padding: 4px;
+	border: 1px #fff solid;
+	width:500px;	
+}
+
+table.print-tables {
+    border-collapse: collapse;
+    border-spacing: 0;
+    font-size: 11px;
+    margin-left: 10px;
+    margin-right: 10px;
+    
+    width: 770px;
+    margin-bottom: 20px;
+}
+
+td.print-tables-value {
+    background-color: white;
+    border: 1px solid black;
+    font-weight: normal;
+    padding: 4px;    
+}
+
+td.print-tables-header {
+    background-color: white;
+    border: 1px solid black;
+    font-weight: bold;
+    padding: 4px;
+}

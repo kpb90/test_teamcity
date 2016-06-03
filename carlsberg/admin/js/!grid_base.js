@@ -1,0 +1,527 @@
+function Grid_Base(meta) {
+	
+	this.meta = meta;
+			
+	this.record = Ext.data.Record.create(this.meta.fields);
+	this.store = new Ext.data.Store({
+		proxy: new Ext.data.HttpProxy({
+			url: meta.control,
+			method: 'POST'
+		}), 			
+		reader: new Ext.data.JsonReader({
+					id: 'id',
+					totalProperty: "total", 
+					root: "results" 
+				}, this.record),
+		baseParams:{task: 'get'+meta.task},
+		remoteSort:true	
+	});
+	
+	stores = new Object();
+	
+	if (meta.hasOwnProperty('stores')) {
+		var meta_stores = this.meta.stores; 		
+		for(i = 0; i < meta_stores.length; i++) {
+			var meta_store_conf = meta_stores[i];
+			var meta_store = new Ext.data.ArrayStore(meta_store_conf);
+			stores[meta_store_conf.storeId] = meta_store;
+		}
+	}
+	this.loadedStores = stores;
+	
+	var checks = new Ext.grid.CheckboxSelectionModel();
+	
+	var table_columns = new Array();
+	table_columns[0] = checks;
+	var index = 1;
+	var fields = this.meta.fields;
+	for(i = 0; i < fields.length; i++) {
+		var field = fields[i];		
+		if(field.visible) {
+			var column = null;			
+			if(field.type == 'bool') {
+				column = {header: field.header, width: field.width, sortable: true, dataIndex: field.name, renderer: renderBool};
+			} else if(field.type == 'data') {				
+				var rend = 'renderDateOnly';
+				if(field.renderer) {
+					rend = field.renderer; 
+				}
+				column = {header: field.header, width: field.width, sortable: true, dataIndex: field.name, renderer: eval(rend)}; 
+			} else if(field.type == 'int' && field.sub_type == 'box') {
+				column = {header: field.header, width: field.width, sortable: true, dataIndex: field.name, 
+						 renderer: function(data, cell, record, rowIndex, columnIndex, store) {						 	
+							var storeName = meta.fields[columnIndex-1].store; 
+						 	var target_store = stores[storeName];
+						 	if(target_store) {					 							 							 								 		
+						 		return getNameValue(data, target_store);
+						 	} else {
+						 		return "";
+						 	}
+						 }};
+			} else if(field.sub_type == 'image') {
+				 column = {header: field.header, width: field.width, sortable: true, dataIndex: field.name, renderer: renderImage};
+			} else {
+				if(field.renderer) {
+					column = {header: field.header, width: field.width, sortable: true, dataIndex: field.name, renderer: eval(field.renderer)};
+				} else {
+					column = {header: field.header, width: field.width, sortable: true, dataIndex: field.name};
+				}
+			}			
+			table_columns[index] = column;			
+			index++;
+		}
+	}	
+	
+	this.pagingBar = new Ext.PagingToolbar({
+		pageSize: 10,
+		store: this.store,
+		displayInfo: true,
+		displayMsg: meta.paging_info + ' {0} - {1} из {2}',
+		emptyMsg: meta.paging_mult + " не найдены"	,
+		plugins: new Ext.ux.grid.PageSizer({
+	      	beforeText: 'Показывать',
+	      	afterText: meta.paging_show + ' на страницу',
+	      	sizes: [[10],[25],[50],[100],[200],[300],[500]],
+	      	comboCfg: {width: 70}
+	    }) 
+	});	
+	
+	this.grid = new Ext.grid.GridPanel({		
+		id:meta.module+'-list',	
+		store: this.store,	
+		stripeRows: true,	
+		enableColumnHide: false,
+		enableColumnMove: false,
+		enableHdMenu: false, 
+		trackMouseOver:false,
+		sm:checks,					
+		columns: table_columns,
+		viewConfig: {
+			forceFit: true	        
+		}, 		
+		bbar: this.pagingBar, 
+		tbar: [{		
+			text: 'Добавить',
+			id:'create-btn',		
+			icon: 'images/new.gif',
+			cls:"x-btn-text-icon", 
+	        handler: add                                       				
+		},'-', {
+			id:'edit-btn',
+			text: 'Редактировать',
+			icon: 'images/edit.gif',
+			cls:"x-btn-text-icon", 
+			handler: edit,
+			disabled:true
+		}, '-',{
+			id:'remove-btn',
+			text: 'Удалить',
+			icon: 'images/delete.gif',
+			cls:"x-btn-text-icon", 
+			handler:remove,
+			disabled:true
+		}],							
+									 	
+		height: tableHeight,
+		width: tableWidth - 15	
+	});
+	
+	if(meta.hasOwnProperty('actions')) {
+		var toolbar = this.grid.getTopToolbar();
+		var actions = meta.actions;
+		for(i = 0; i < actions.length; i++) {
+			var action = actions[i];
+			toolbar.addSeparator();
+			toolbar.add({
+				id: action.id,
+				text: action.text,
+				icon: 'images/'+action.icon,
+				cls:"x-btn-text-icon",
+				handler: eval(action.handler) 
+			})
+		}
+		
+	}
+	
+	this.getRecord = function() {		
+		return this.record;
+	}
+	
+	this.getStore = function() {
+		return this.store;	
+	}
+	
+	this.getGrid = function() {
+		return this.grid;
+	}
+	
+	this.getLoadedStore = function(name) {
+		return this.loadedStores[name];
+	}	
+	
+	var boolStore = new Ext.data.SimpleStore({
+		id:0,
+		fields: ['id', 'name'],
+		data: [							
+			['0', 'Нет'],
+			['1', 'Да']
+		]
+	});	
+	
+	this.grid.getSelectionModel().on('rowselect', function(model, rowIndex, record) {	
+		Ext.getCmp('remove-btn').enable();
+		if(Ext.getCmp('edit-btn')) {
+			Ext.getCmp('edit-btn').enable();
+		}	
+				
+	});
+
+	this.grid.on('dblclick', function() {	
+		edit();		
+	});
+					
+	
+	var controls = new Array();
+	var fields = this.meta.fields;
+	var width = meta.dialog_width - 150;
+	var index = 0;		
+	var fileUpload = false;
+	
+	
+	var idField = new Ext.form.Hidden({
+		id:'id',
+		trequred: false
+	});		
+	
+	
+	for(i = 0; i < fields.length; i++) {
+		var field = fields[i];
+		if(field.not_editable) {
+			continue;
+		}
+		var component;
+		if(field.type == 'string') {			
+			if(field.sub_type == 'image') {
+				fileUpload = true;
+				if(!field.empty_text) {
+					field.empty_text = 'Выберите изображение'; 
+				}				
+				component = new Ext.ux.form.FileUploadField({
+					id: field.name,
+				    emptyText: field.empty_text,
+				    fieldLabel: field.header,
+				    name: field.upload_name,            
+				    width:width,
+				    ttype: 'image',
+				    buttonCfg: {
+				    	text: '',    	
+				        iconCls: 'upload-icon'
+				     }        	
+				});																
+			} else if(field.sub_type == 'file') {
+				fileUpload = true;
+				component = new Ext.ux.form.FileUploadField({
+					id: field.name,
+				    emptyText: 'Выберите файл',
+				    fieldLabel: field.header,
+				    name: field.upload_name,            
+				    width:width,
+				    ttype: 'image',
+				    buttonCfg: {
+				    	text: '',    	
+				        iconCls: 'upload-icon'
+				     }        	
+				});																
+				
+				
+			} else {
+				component = new Ext.form.TextField({								
+					fieldLabel :field.header,
+					id:field.name,
+					width: width,
+					ttype: field.type,
+					trequred: field.required 
+				})		
+			}		
+		} else if(field.type == 'bool') {
+			component =  new Ext.form.ComboBox({		
+				id:field.name,
+				store: boolStore,
+				mode: 'local',
+				fieldLabel: field.header,
+				valueField: 'id',
+				displayField: 'name',	
+				triggerAction: 'all',	
+				width:100,
+				ttype: field.type,
+				trequred: field.required 										
+			});					
+		} else if(field.type == 'text') {
+			component = new Ext.form.TextArea({
+				id:field.name,
+				fieldLabel :field.header,				
+				width: width,
+				height: field.height,
+				ttype: field.type,
+				trequred: field.required 	
+			})								
+		} else if(field.type == 'int') {
+			if(!field.visible && !field.sub_type) {
+				continue;
+			} else if(field.sub_type == 'box') {
+				var target_store = stores[field.store];	
+				component =  new Ext.form.ComboBox({		
+					id:field.name,
+					store: target_store,
+					mode: 'local',
+					fieldLabel: field.header,
+					valueField: 'id',
+					displayField: 'name',	
+					triggerAction: 'all',	
+					width:width,
+					ttype: field.type,
+					trequred: field.required 										
+				});		
+			}
+		} else if(field.type == 'digit') {
+			component = new Ext.form.NumberField({								
+					fieldLabel :field.header,
+					id:field.name,
+					decimalPrecision : 8,
+					width: width,
+					ttype: field.type,
+					trequred: field.required 
+				})		
+		} else if(field.type == 'data') {
+			var date_format = 'd.m.Y';
+			if(field.format) {
+				date_format = field.format;
+			}  
+			
+			component = new Ext.form.DateField({	
+				id:field.name,
+				fieldLabel: field.header,
+				format: date_format,
+				ttype: field.type,
+				width:100,
+				trequred: field.required 		
+			});
+		}else if(field.type == 'rich_text') {
+			component = new Ext.form.CKEditor({
+				id: field.name,
+				fieldLabel: field.header,
+				height: field.height,
+				CKConfig: { 							
+					toolbar:[ 
+						['Source','-','Templates'],
+						['Cut','Copy','Paste','PasteText','PasteFromWord'],
+						['Undo','Redo','-','Find','Replace','-','SelectAll','RemoveFormat'],							
+						['NumberedList','BulletedList','-','Outdent','Indent', 'Link','Unlink','Anchor'],																
+						['Image','Flash','Table','HorizontalRule','Smiley','SpecialChar'],
+						['JustifyLeft','JustifyCenter','JustifyRight','JustifyBlock', 'TextColor','BGColor', 'ShowBlocks'],								
+						['Bold','Italic','Underline','Strike','-','Subscript','Superscript','Styles','Format','Font','FontSize']																								
+					],
+					enterMode: CKEDITOR.ENTER_BR,
+					shiftEnterMode : CKEDITOR.ENTER_P  
+				}									
+			}); 
+		}					
+		controls[index] = component;
+		index++;
+	}
+	controls[index] = idField; 		
+	var mainPanel = null;
+	
+	if(!fileUpload) {
+		mainPanel = new Ext.Panel({
+			layout:'form',			
+			bodyStyle:'padding:5px;background-color:white',
+			border:false,
+			width:350,
+			height:meta.dialog_height,
+			items: controls	
+		});
+	} else {
+		mainPanel = new Ext.form.FormPanel({						
+			bodyStyle:'padding:5px;background-color:white',
+			border:false,
+			width:350,
+			height:meta.dialog_height,
+			fileUpload: true,
+			items: controls
+		});
+	}
+	
+	var dialog = new Ext.Window({			   
+		layout: 'fit',	
+		autoHeight:true,
+		width:meta.dialog_width,
+		constrain: true,
+		modal:true,
+		plain:true,
+		resizable: true,
+		bodyStyle:'background-color:white;',
+		buttonAlign:'center',
+		items: mainPanel,
+		closeAction:'hide',	
+		buttons:[{
+			text:'Сохранить',
+			handler:save
+			}, {
+			text:'Отмена',			
+			handler: function() {
+				dialog.hide();
+			}
+		}]		 	
+	});
+
+	
+	
+	function add() {		
+		dialog.setTitle('Создание ' + meta.dialog_title);
+		for(i = 0; i < controls.length; i++) {			
+			if(controls[i].ttype == 'bool') {
+				controls[i].setValue(1);
+			} else {								
+				controls[i].setValue('');
+			} 
+		}		
+		dialog.show();	
+	}
+	
+	function edit() {
+		var record = Ext.getCmp(meta.module+'-list').getSelectionModel().getSelected();
+		if(record) {			
+			var id = record.get('id');										
+			Ext.Ajax.request({ 		
+				url:meta.control, 
+				params:{'task':'edit'+meta.task, 'id':id}, 					 
+				method:'POST',										 
+				callback: function (options, success, response) {			 				 	
+					var json = Ext.util.JSON.decode(response.responseText);
+					for (var prop in json) {
+						if (json.hasOwnProperty(prop)) {
+							var comp = Ext.getCmp(prop);
+							if(comp) {								
+								if(comp.ttype == 'image') {									
+									comp.reset();
+									comp.setValue('');
+								} else if(comp.ttype == 'data') { 
+									var value = json[prop];
+									var date = Date.parseDate(value, 'Y-m-d H:i:s');															
+									comp.setValue(date);
+								} else {
+									comp.setValue(json[prop]);
+								}
+							}
+						}
+					}
+					dialog.setTitle('Редактирование ' + meta.dialog_title);	
+					dialog.show();				
+				 }, 
+			 	failure:function(response,options){
+					showErrorMessage('Ошибка связи с сервером');
+				}	
+			});		
+		}				
+		
+	}
+	
+	function remove() {
+		var records = Ext.getCmp(meta.module+'-list').getSelectionModel().getSelections();
+		if(records) {
+			Ext.Msg.confirm('Удаление ' + meta.dialog_title, 'Вы действительно хотите удалить выделенные ' + meta.dialog_title + '?', function(btn){
+				if(btn == 'yes'){
+					deleted = [];
+					for(i = 0; i < records.length; i++) {
+						deleted[i] = records[i].get('id');
+					}
+					var removing = deleted.join(',');
+					Ext.Ajax.request({ 		
+						url:meta.control,  
+						params:{'task':'delete'+meta.task, 'ids':removing}, 					 
+						method:'POST',										 
+						callback: function (options, success, response) {			 				 								
+							if(response.responseText != '0') {								
+								Ext.getCmp(meta.module+'-list').getStore().reload();
+							} else {								
+								var message = "Ошибка удаления";
+								if(message) {
+									showErrorMessage(message);					
+								}												
+							}
+						 }, 
+					 	failure:function(response,options){
+							showErrorMessage('Ошибка связи с сервером');
+						}	
+					});	
+				}		
+			})
+		}
+	}
+	
+	function save() {
+		var params = new Object();
+		params.task = 'save'+meta.task;
+		var message = '';
+		fileUpload = false;
+		for(i = 0; i < controls.length; i++) {
+			var control = controls[i];
+			var value = control.getValue();			
+			if(control.trequred) {
+				message = addFieldToMessage(message, value, control.fieldLabel);
+			}						
+			if(control.ttype == 'image' && value) {
+				fileUpload = true;
+			} else if( control.ttype == 'image' && !value) {
+				fileUpload = false || fileUpload;
+			} else if(control.ttype == 'data' && value) {				
+				value = value.format('Y-m-d H:i:s');				
+			}			
+			params[control.id] = value;
+		}		
+		if(message) {
+			message = 'Не введены поля: ' + message;
+			showErrorMessage(message);
+			return;			
+		}
+		
+		if(!fileUpload) {
+			Ext.Ajax.request({ 		
+				url:meta.control, 
+				params:params, 					 
+				method:'POST',										 
+				callback: callback, 
+				failure: failure
+			});			
+		} else {
+			Ext.Ajax.request({ 		
+				url:meta.control, 
+				params:params, 					 
+				method:'POST',	
+				form: mainPanel.getForm().getEl().dom,
+				headers: {'Content-type':'multipart/form-data'},									 
+				callback: callback, 
+				failure: failure
+			});	
+		}
+	}
+	
+	function callback(options, success, response) {			 				 	
+//		var json = Ext.util.JSON.decode(response.responseText);																
+		if(response.responseText != '0') {
+			dialog.hide();
+			Ext.getCmp(meta.module+'-list').getStore().reload();																				
+		} else {						
+			var message = "Ошибка выполнения операции";					
+			showErrorMessage(message);														
+		}
+							
+	}
+	
+	function  failure(response,options){
+		 showErrorMessage('Нет соединения с сервером');
+	}	
+	
+
+}

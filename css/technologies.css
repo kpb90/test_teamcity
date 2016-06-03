@@ -1,0 +1,641 @@
+.technology-tabs{
+    text-align: center;
+}
+._600 .technology-tabs > a{
+    width: 112px;
+}
+._360 .technology-tabs{
+    font-size: 0;
+}
+._360 .technology-tabs > a{
+    width: 93px;
+}
+._360 .technology-tabs > a.hands{
+	width: 150px;
+}
+._360 .technology-tabs > a + a{
+    margin-left: 0;
+}
+._360 .technology-list ul.list div.list  {
+	width: 43%;
+}
+.technology-tabs > a{
+    font-size: 0;
+    display: inline-block;
+    font-family: MS-700;
+    text-transform: uppercase;
+    font-size: 11px;
+    background-color: #ececec;
+    width: 151px;
+    height: 43px;
+    cursor: pointer;
+    line-height: 43px;
+}
+.technology-tabs > a + a{
+    margin-left: 1px;
+}
+.technology-tabs > a:hover, .technology-tabs > a.active{
+    background-color: #080808;
+    color: #fff;
+}
+.technology-tabs > a > i{
+    display: inline-block;
+    position: relative;
+}
+.technology-tabs > a > i:after{
+    content: "";
+    display: block;
+    position: absolute;
+    left: 0;
+    background-image: url(../images/sprites/category-icons-small.png);
+}
+._360 .technology-tabs > a.cloths > i{
+    padding-left: 30px;
+}
+.technology-tabs > a.cloths > i{
+    padding-left: 33px;
+}
+.technology-tabs > a.cloths > i:after{
+    width: 24px;
+    height: 20px;
+    background-position: 0 0;
+    top: 12px
+}
+.technology-tabs > a.cloths:hover > i:after, .technology-tabs > a.cloths.active > i:after{
+    background-position: -24px 0;
+}
+
+._360 .technology-tabs > a.shoes > i{
+    padding-left: 28px;
+}
+.technology-tabs > a.shoes > i{
+     padding-left: 33px;
+ }
+.technology-tabs > a.shoes > i:after{
+    width: 24px;
+    height: 16px;
+    background-position: 0 -20px;
+    top: 13px
+}
+.technology-tabs > a.shoes:hover > i:after, .technology-tabs > a.shoes.active > i:after{
+    background-position: -24px -20px;
+}
+.technology-tabs > a.hands > i:after{
+    background-position: 0 -137px;
+    height: 21px;
+    left: -25px;
+    top: 11px;
+    width: 24px;
+}
+.technology-tabs > a.hands:hover > i:after{
+    background-position: -22px -137px;
+}
+
+.technology-tabs > a.siz > i{
+    padding-left: 33px;
+}
+.technology-tabs > a.siz > i:after{
+    width: 22px;
+    height: 22px;
+    background-position: 0 -36px;
+    top: 11px
+}
+.technology-tabs > a.siz:hover > i:after, .technology-tabs > a.siz.active > i:after{
+    background-position: -22px -36px;
+}
+
+.technology-list{
+    background-color: #faf9f2;
+    margin-top: 33px;
+}
+.technology-list + .technology-list{
+    margin-top: 10px;
+}
+.technology-list header{
+    position: relative;
+    border-bottom: 1px solid #e8e5dd;
+    display: table;
+    width: 100%;
+}
+.technology-list header > div{
+    display: table-cell;
+    vertical-align: middle;
+    height: 70px;
+    padding-right: 15px;
+}
+._480 .technology-list header > div{
+    padding-right: 40px;
+}
+._360 .technology-list header h2, ._600 .technology-list header h2{
+    font-size: 14px;
+    line-height: 16px;
+}
+.technology-list header h2{
+    display: inline-block;
+    font-family: Arial,Helvetica,Garuda,sans-serif;
+    font-size: 18px;
+    line-height: 18px;
+    text-transform: uppercase;
+    padding-left: 93px;
+    font-weight: bold;
+}
+.technology-list header i{
+    height: 70px;
+    width: 70px;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+.technology-list header i:before{
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 10px 0 10px 10px;
+    border-color: transparent transparent transparent #00ffea;
+    content: "";
+    position: absolute;
+    left: 100%;
+    cursor: default;
+    margin-top: -10px;
+    top: 50%;
+}
+.technology-list.cloths header i{
+    background-color: #002f88;
+}
+.technology-list.shoes header i{
+    background-color: #080808;
+}
+.technology-list.siz header i{
+    background-color: #f26900;
+}
+.technology-list.hands header i{
+    background-color: #bd2844;
+}
+.technology-list.cloths header i:before{
+    border-color: transparent transparent transparent #002f88;
+}
+.technology-list.shoes header i:before{
+    border-color: transparent transparent transparent #080808;
+}
+.technology-list.siz header i:before{
+    border-color: transparent transparent transparent #f26900;
+}
+.technology-list.hands header i:before{
+    border-color: transparent transparent transparent #bd2844;
+}
+.technology-list header i:after{
+    content: "";
+    position: absolute;
+    background-image: url(../images/sprites/catalog-menu.png);
+    left: 50%;
+    top: 50%;
+}
+.technology-list.cloths header i:after{
+    background-position: 0 -27px;
+    height: 35px;
+    width: 41px;
+    margin-left: -21px;
+    margin-top: -17px;
+}
+.technology-list.shoes header i:after{
+    background-position: 0 0;
+    height: 27px;
+    width: 38px;
+    margin-left: -19px;
+    margin-top: -14px;
+}
+.technology-list.siz header i:after{
+    background-position: 0 -103px;
+    height: 37px;
+    width: 36px;
+    margin-left: -18px;
+    margin-top: -18px;
+}
+.technology-list.hands header i:after{
+    background-position: 0 -240px;
+    height: 39px;
+    margin-left: -18px;
+    margin-top: -18px;
+    width: 36px;
+}
+.technology-list ul.list li + li{
+    margin-top: 11px;
+}
+.technology-list ul.list div.title{
+    color: #252525;
+    text-transform: uppercase;
+    border-bottom: 1px solid #e8e5dd;
+    padding-bottom: 11px;
+    font-weight: bold;
+}
+.technology-list ul.list a{
+    font-size: 12px;
+    color: #565656;
+}
+.technology-list > div{
+    padding: 31px 40px 40px 40px;
+}
+.technology-list ul.list{
+    list-style: none;
+    display: inline-block;
+    vertical-align: top;
+    width: 100%;
+ }
+._480 .technology-list ul.list{
+    margin-right: 0;
+}
+/*
+.technology-list ul.list + ul.list{
+    width: 60%;
+    margin-right: 0;
+}     */
+.technology-list.siz ul.list > div.title{
+    font-size: 12px;
+}
+.technology-list.siz .sub-title{
+    font-size: 10px;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-top: 15px;
+}
+._980 .technology-list.siz > div{
+    -moz-column-width: 235px;
+    -webkit-column-width: 235px;
+    -moz-column-gap: 20px;
+    -webkit-column-gap: 20px;
+    column-width: 235px;
+    column-gap: 20px;
+}
+._850 .technology-list.siz > div{
+    -moz-column-width: 235px;
+    -webkit-column-width: 235px;
+    -moz-column-gap: 20px;
+    -webkit-column-gap: 20px;
+    column-width: 235px;
+    column-gap: 20px;
+}
+._600 .technology-list.siz > div{
+    -moz-column-width: 220px;
+    -webkit-column-width: 220px;
+    -moz-column-gap: 20px;
+    -webkit-column-gap: 20px;
+    column-width: 220px;
+    column-gap: 20px;
+}
+
+.technology-list.siz > div{
+    -moz-column-width: 260px;
+    -webkit-column-width: 260px;
+    -moz-column-gap: 35px;
+    -webkit-column-gap: 35px;
+    column-width: 260px;
+    column-gap: 35px;
+	padding: 42px 40px 40px;
+}
+.technology-list.siz ul.list + ul.list div.list{
+    width: 100% !important;
+    margin: 0;
+    padding: 0;
+    display: inline-block;
+}
+.technology-list.siz ul.list{
+    display: inline-block;
+    width: 100% !important;
+    margin-right: 0;
+    margin-bottom: 50px;
+    margin-top: 0px;
+}
+._480 .technology-list.siz ul.list + ul.list{
+    margin-top: 0px;
+    margin-bottom: 30px;
+}
+._480 .technology-list.siz ul.list{
+    margin-top: 0px;
+    margin-bottom: 30px;
+}
+.technology-list.siz ul.list + ul.list{
+    width: 100% !important;
+    margin-right: 0;
+}
+.technology-list ul.list div.list{
+    display: inline-block;
+    vertical-align: top;
+}
+.technology-list ul.list div.list{
+    width: 27%;
+    margin-right: 5%;
+    padding-right: 2%;
+}
+.technology-list ul.list div.list + div.list{
+   /* width: 30%;
+    margin-right: 0;*/
+}
+.technology-list ul.list div.list + div.list + div.list{
+    margin-right: 0;
+}
+.technology-list.siz ul.list div.list{
+    width: auto;
+}
+._768 .technology-list ul.list{
+    width: 50%;
+}
+._768 .technology-list ul.list + ul.list{
+    width: 45%;
+}
+._768 .technology-list ul.list + ul.list div.list{
+    display: block;
+    margin: 0;
+    width: 100%;
+}
+._768 .technology-list ul.list + ul.list div.list + div.list{
+    width: 100%;
+}
+._480 .technology-list > div{
+    padding-left: 18px;
+    padding-right: 18px;
+}
+._480 .technology-list ul.list{
+    width: 100%;
+}
+._480 .technology-list ul.list + ul.list{
+    width: 100%;
+    margin-top: 34px;
+}
+.ie9 .technology-list.siz > div{
+    padding-left: 5px;
+}
+.ie9 .technology-list.siz ul.list{
+    display: inline-block;
+    width: 28% !important;
+    margin-left: 35px;
+}
+.ie9 .technology-list.siz ul.list + ul.list{
+    width: 28% !important;
+}
+.ie9 ._980 .technology-list.siz ul.list{
+    width: 40% !important;
+}
+.ie9 ._980 .technology-list.siz ul.list + ul.list{
+    width: 40% !important;
+}
+.ie9 ._600 .technology-list.siz ul.list{
+    width: 100% !important;
+    margin-left: 0;
+}
+.ie9 ._600 .technology-list.siz ul.list + ul.list{
+    width: 100% !important;
+}
+.ie9 ._600 .technology-list.siz > div{
+    padding-left: 35px;
+}
+.ie9 ._360 .technology-list.siz > div{
+    padding-left: 18px;
+    padding-right: 18px;
+}
+
+.left-content{
+    width: 300px;
+    float: left;
+}
+.right-content{
+    margin-left: 300px;
+}
+.left-content.prop-value{
+     width: 310px;
+    position: relative;
+}
+.right-content.prop-value{
+    margin-left: 340px;
+    overflow: hidden;
+}
+.right-content.prop-value .user-content {
+	color: #252525;
+	font-family: 'Helvetica';
+	font-size: 14px;
+	line-height: 24px;
+}
+#content .right-content.prop-value h1{
+    font-size: 36px;
+    text-align: left;
+	line-height: 38px;
+}
+.technology-list-section{
+    padding-top: 20px;
+}
+._850 .technology-list-section #technologyBlock{
+    display: none;
+    margin-left: 60px;
+}
+._850 .left-content.prop-value{
+    min-width: 0;
+    width: auto;
+}
+._850 .technology-list-section.opened .left-content.prop-value{
+    width: 310px;
+}
+._360 .technology-list-section.opened .left-content.prop-value{
+    width: 300px;
+}
+._850 .technology-list-section.opened .right-content.prop-value{
+    margin-left: 350px;
+}
+._850 .technology-list-section.opened{
+    overflow: hidden;
+    max-width: 800px;
+
+}
+._850 .right-content.prop-value{
+    margin-left: 0;
+    padding: 0 50px;
+
+}
+._850 .technology-list-section.opened .right-content.prop-value{
+    min-width: 600px;
+}
+._850 .technology-list-section{
+
+}
+#content.no-padding{
+    padding: 0;
+}
+#technology-list-button{
+    display: none;
+    width: 40px;
+    height: 315px;
+    background-image: url(../images/layout/tehnology-list-button.png);
+    background-position: 0 0;
+    background-repeat: no-repeat;
+    position: absolute;
+    left: 0;
+    top: 0;
+    cursor: pointer;
+    background-color: #fff;
+}
+#technology-list-button.active{
+    background-position: -40px 0;
+}
+._850 #technology-list-button{
+    display: block;
+}
+._480 #technology-list-button{
+    background-image: url(../images/layout/tehnology-list-button-horizontal.png);
+    width: 315px;
+    height: 40px;
+
+}
+._360 #technology-list-button{
+    width: 300px;
+}
+._480 .right-content.prop-value{
+    padding: 0 10px;
+}
+._480 .left-content.prop-value{
+    float: none;
+    clear: left;
+}
+._480 .right-content.prop-value{
+    margin-left: 0;
+}
+._480 .technology-list-section.opened .right-content.prop-value{
+    margin-left: 0;
+}
+._480 .technology-list-section .left-content.prop-value{
+    margin-bottom: 10px;
+    padding: 50px 10px 0 10px;
+}
+._480 .technology-list-section.opened .left-content.prop-value{
+    margin-bottom: 40px;
+}
+._480 .technology-list-section.opened .right-content.prop-value{
+    min-width: 0;
+}
+._480 #technology-list-button.active{
+   background-position: 0 -40px;
+}
+._480 .technology-list-section #technologyBlock{
+    margin-left: 0;
+}
+._360 #technologyBlock{
+    width: 300px;
+    margin-left: 0;
+}
+._360 #technologyBlock > .body > .container .page{
+    width: 186px;
+}
+._360 .technology-list-section.opened .right-content.prop-value{
+
+}
+._360 .jspVerticalBar{
+    width: 25px;
+}
+
+
+
+
+
+
+
+.notice-container{
+    margin: 25px 0 28px;
+}
+.notice-icon{
+    position: relative;
+    display: inline-block;
+    width: 110px;
+    height: 40px;
+    padding-left: 40px;
+    background-color: #eeeadf;
+    text-decoration: none;
+}
+.notice-icon i{
+    height: 40px;
+    width: 40px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    background-color: #002f88;
+}
+.notice-icon i:after{
+    content: "";
+    position: absolute;
+    left: 100%;
+    top: 50%;
+    margin-top: -5px;
+    width: 0px;
+    height: 0px;
+    border-style: solid;
+    border-width: 5px 0 5px 5px;
+    border-color: transparent transparent transparent #002f88;
+}
+.notice-icon i:before{
+    content: "";
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    display: block;
+}
+.notice-icon.prop-value i:before{
+    background-image: url("../images/sprites/category-icons-small.png");
+
+}
+.notice-icon.prop-value.prop-value01_01 i:before{
+    background-position: -24px 0;
+    height: 20px;
+    width: 24px;
+    margin-left: -12px;
+    margin-top: -10px;
+}
+.notice-icon.prop-value.prop-value01_02 i:before{
+    background-position: -24px -20px;
+    height: 16px;
+    margin-left: -12px;
+    margin-top: -8px;
+    width: 24px;
+}
+.notice-icon.prop-value.prop-value01_03 i:before{
+    background-position: -22px -36px;
+    height: 22px;
+    margin-left: -12px;
+    margin-top: -10px;
+    width: 22px;
+}
+.notice-icon.prop-value.prop-value01_02 i{
+    background-color: #080808;
+}
+.notice-icon.prop-value.prop-value01_02 i:after{
+    border-color: transparent transparent transparent #080808;
+}
+.notice-icon.prop-value.prop-value01_03 i{
+    background-color: #F26900;
+}
+.notice-icon.prop-value.prop-value01_03 i:after{
+    border-color: transparent transparent transparent #F26900;
+}
+.notice-icon.prop-value.prop-value01_05 i{
+    background-color: #bd2844;
+}
+.notice-icon.prop-value.prop-value01_05 i:after{
+    border-color: transparent transparent transparent #bd2844;
+}
+.notice-icon.prop-value.prop-value01_05 i:before{
+    background-position: -20px 21px;
+    height: 21px;
+    margin-left: -12px;
+    margin-top: -10px;
+    width: 22px;
+}
+.notice-icon.prop-value > div{
+    margin-left: 10px;
+    margin-top: 8px;
+    font-size: 11px;
+    font-family: MS-900;
+    text-transform: uppercase;
+}
+.notice-icon.prop-value > div + div{
+    font-family: MS-700;
+    margin-top: 3px;
+}
+
+
+
+

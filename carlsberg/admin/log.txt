@@ -1,0 +1,3 @@
+mysql error: Query was empty
+mysql error: Query was empty
+mysql error: Query was empty

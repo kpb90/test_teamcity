@@ -1,0 +1,32 @@
+mysql error: Unknown column 'u.order_id' in 'field list'
+mysql error: Unknown column 'u.order_id' in 'field list'
+mysql error: Unknown column 'u.order_id' in 'field list'
+mysql error: Unknown column 'order_id' in 'field list'
+mysql error: Unknown column 'order_id' in 'field list'
+mysql error: Unknown column 'order_id' in 'field list'
+mysql error: Operand should contain 1 column(s)
+mysql error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ') as more
+		 		   FROM cms2_orders as o ORDER BY id ASC LIMIT 0, 10' at line 1
+mysql error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ') as more
+		 		   FROM cms2_orders as o ORDER BY id ASC LIMIT 0, 10' at line 1
+mysql error: Unknown column 'o.manager' in 'on clause'
+mysql error: Column 'id_factory' in field list is ambiguous
+mysql error: Column 'manager' in where clause is ambiguous
+mysql error: Column 'manager' in where clause is ambiguous
+mysql error: Column 'manager' in where clause is ambiguous
+mysql error: Column 'manager' in where clause is ambiguous
+mysql error: Column 'manager' in where clause is ambiguous
+mysql error: Column 'manager' in where clause is ambiguous
+mysql error: Column 'manager' in where clause is ambiguous
+mysql error: Column 'manager' in where clause is ambiguous
+mysql error: Column 'manager' in where clause is ambiguous
+mysql error: Column 'manager' in where clause is ambiguous
+mysql error: Column 'manager' in where clause is ambiguous
+mysql error: Column 'manager' in where clause is ambiguous
+mysql error: Column 'manager' in where clause is ambiguous
+mysql error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ''32  ORDER BY id DESC LIMIT 0, 100' at line 11
+mysql error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ''32  ORDER BY id DESC LIMIT 0, 100' at line 11
+mysql error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ''32)  ORDER BY id DESC LIMIT 0, 100' at line 11
+mysql error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'FROM cms2_orders_carslberg as o inner join  `users_enc` as u on o.user_id = u.id' at line 5
+mysql error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '=='',0,1) as currency,
+		 				  u.name as customer_name, u.phone as  customer_p' at line 2

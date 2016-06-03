@@ -1,0 +1,178 @@
+#content section.service-list {
+	width: 65%;
+	background-color: #faf9f2;
+	float: left;
+}
+
+#content section.leftinfo {
+	float: left;
+	width: 30%;
+	margin-right: 5%;
+}
+#content section.leftinfo div p {
+	font-family: 'Helvetica';
+	font-size: 14px;
+	line-height: 25px;
+	color: #252525;
+}
+#content section.leftinfo div ol{
+	color: #565656;
+	margin: 15px 0;
+}
+#content section.leftinfo div > div{
+	text-transform: uppercase;
+	font-weight: bold;
+	margin-bottom: 15px;
+}
+
+#content section.leftinfo > div {
+
+}
+
+#content section.service-list > div {
+	padding: 35px 40px;
+}
+
+#content section.service-list > div article + article {
+	margin-top: 40px;
+}
+
+#content section.service-list > div article .title {
+	font-size: 18px;
+	font-weight: bold;
+	font-family: 'Helvetica';
+	text-transform: uppercase;
+	padding-bottom: 8px;
+	border-bottom: 1px solid #d6d2c8;
+	margin-bottom: 10px;
+}
+#content section.service-list > div article .title > a {
+	text-decoration: none;
+	font-size: 18px;
+	font-weight: bold;
+	font-family: 'Helvetica';
+	text-transform: uppercase;
+}
+#content section.service-list > div article .title > a:hover{
+	text-decoration: underline;
+}
+
+#content section.service-list > div article .pic {
+	width: 93px;
+	height: 93px;
+	overflow: hidden;
+	float: left;
+}
+
+#content section.service-list > div article .content {
+	margin-left: 103px;
+	font-size: 14px;
+	font-family: 'Helvetica';
+	line-height: 20px;
+	color: #252525
+}
+
+#content section.service-list > div article .content .more {
+	margin-top: 15px;
+}
+
+#content section.service-list > div article .content .more a {
+	font-size: 10px;
+	font-family: 'MS-700';
+	text-transform: uppercase;
+	color: #ff6f02;
+	text-decoration: none;
+}
+#content section.service-list > div article .content .more a i {
+	font-size: 14px;
+	font-family: 'Helvetica';
+}
+
+#content section.service-list > div article .content .more a:hover {
+	text-decoration: underline;
+}
+
+#content section.service-list > div article.nopic .content {
+	margin-left: 0px;
+	width: 95%;
+}
+
+#content section.service-list > div article.nopic .pic {
+	display: none;
+}
+
+/* 850 */
+
+._850 #content section.service-list {
+	width: 100%;
+	float: none;
+}
+
+._850 #content section.leftinfo {
+	float: none;
+	width: 100%;
+	margin-right: 0;
+	text-align: center;
+	margin-bottom: 30px;
+}
+
+._850 #content section.leftinfo div > div{
+	text-transform: uppercase;
+	font-weight: bold;
+	font-size: 14px;
+}
+._850 #content section.leftinfo .vostok-ol {
+	position: relative;
+	width: 100%;
+}
+._850 #content section.leftinfo .vostok-ol li {
+	width: 45%;
+	float: left;
+	margin-right: 3%;
+	clear: none;
+}
+._850 #content section.leftinfo ol.vostok-ol li:nth-child(2n+1), ._850 #content section.leftinfo ol.vostok-ol li:nth-child(2n+1):before {
+	background-color: transparent;
+}
+
+._850 #content section.leftinfo ol.vostok-ol li:nth-child(3n+1),._850 #content section.leftinfo ol.vostok-ol li:nth-child(3n+1):before {
+	background-color: #F7F7F7;
+}
+
+._850 #content header .description.pd {
+	padding: 0;
+}
+
+/* 600 */
+
+._600 #content section.service-list > div {
+	padding: 20px;
+}
+
+/* 480 */
+
+._480 #content section.leftinfo .vostok-ol {
+	position: relative;
+	width: 100%;
+}
+._480 #content section.leftinfo .vostok-ol li {
+	width: inherit;
+	float: none;
+	margin-right: 0;
+	clear: both;
+}
+._480 #content section.leftinfo ol.vostok-ol li:nth-child(2n+1), ._850 #content section.leftinfo ol.vostok-ol li:nth-child(2n+1):before {
+	background-color: #F7F7F7;
+}
+
+._480 #content section.leftinfo ol.vostok-ol li:nth-child(3n+1),._850 #content section.leftinfo ol.vostok-ol li:nth-child(3n+1):before {
+	background-color: transparent;
+}
+
+._480 #content section.service-list > div {
+	padding: 10px;
+}
+
+._480 #content section.service-list > div article .content {
+	font-size:12px;
+}

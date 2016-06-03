@@ -1,0 +1,660 @@
+#content #vostok-contacts-map{
+	width: 100%;
+	height: 410px;
+}
+#content #vostok-contacts-map-image a img{
+	max-width: 100%;
+}
+#content #vostok-contacts-map-image {
+	text-align: center;
+	line-height: 0;
+}
+#content #map-contacts{
+	float: right;
+	width: 620px;
+	margin-bottom: 10px;
+	position: relative;
+}
+#vostok-contacts-map-image-download {
+	text-align: right;
+	font-size: 12px;
+	line-height: 12px;
+	margin-top: 5px;
+}
+#content #map-contacts-regions {
+	float: right;
+	width: 620px;
+}
+
+#content #current-contacts{
+	width: 320px;
+	float: left;
+	margin-right: 20px;
+}
+#content #current-contacts .header {
+	background-color: #00509e;
+	padding: 20px 30px;
+	position: relative;
+}
+
+#content #current-contacts .header.toggle{
+	cursor: pointer;
+}
+
+#content #current-contacts .header.toggle:after{
+	-moz-border-bottom-colors: none;
+	-moz-border-left-colors: none;
+	-moz-border-right-colors: none;
+	-moz-border-top-colors: none;
+	border-color: #fff rgba(0, 0, 0, 0) rgba(0, 0, 0, 0);
+	border-image: none;
+	border-right: 7px solid rgba(0, 0, 0, 0);
+	border-style: solid;
+	border-width: 7px;
+	content: "";
+	right: 30px;
+	top: 50%;
+	position: absolute;
+	z-index: 17;
+}
+#content #current-contacts .header.toggle.open:after{
+	border-color: rgba(0, 0, 0, 0) rgba(0, 0, 0, 0) #FFFFFF;
+	margin-top: -8px;
+}
+#content #current-contacts .header.toggle + .body{
+	display: none;
+}
+#content #current-contacts .header > div{
+	font-size: 24px;
+	font-family: 'MS-900';
+	text-transform: uppercase;
+	color: #fff;
+	line-height: 24px;
+}
+#content #current-contacts .header > span {
+	font-size: 11px;
+	font-family: 'MS-700';
+	line-height: 11px;
+	text-transform: uppercase;
+	color: #fff;
+}
+
+#content #current-contacts .body {
+	background-color: #eeeadf;
+	padding: 20px 30px;
+	font-size: 12px;
+	font-family: 'Helvetica';
+	line-height: 20px;
+	color: #252525;
+}
+#content #current-contacts .body > span {
+	color: #686868;
+}
+#content #current-contacts .body h3{
+	font-size: 12px;
+	font-family: 'MS-900';
+	text-transform: uppercase;
+	margin-bottom: 3px;
+	margin-top: 10px;
+}
+#content #current-contacts .body h3:first-child{
+	margin-top: 0px;
+}
+#content #similar-contact-points .body h3.dashed > span {
+	border-bottom: 1px dashed;
+	cursor: pointer;
+}
+#content #similar-contact-points .body h3 + div.contacts{
+	display: none;
+}
+#similar-contact-points .body h3.dashed > a.more, #content #map-contacts .content article header.dashed > a.more{
+	color: #999999;
+	font-family: Helvetica;
+	font-size: 11px;
+	font-weight: normal;
+	padding-left: 5px;
+	text-transform: lowercase;
+	vertical-align: -2px;
+}
+#similar-contact-points .header{
+	margin-top: 20px;
+}
+#similar-contact-points-title {
+	color: #999;
+	font-family: 'MS-700';
+	font-size: 13px;
+	line-height: 12px;
+	text-transform: uppercase;
+	margin-top: 20px;
+}
+#content #current-contacts .footer {
+	background-color: #0079ef;
+	padding: 20px 30px;
+	font-size: 11px;
+	font-family: 'MS-700';
+	line-height: 11px;
+	text-transform: uppercase;
+	color: #fff;
+	line-height: 18px;
+}
+
+#content #map-collapser{
+	background-color: #ececec;
+	padding: 17px;
+	text-align: center;
+	position: relative;
+	font-size: 11px;
+	color: #1266b1;
+	font-family: 'MS-700';
+	line-height: 11px;
+	text-transform: uppercase;
+	cursor: pointer;
+}
+#current-contacts .ext-link-block{
+	margin: 0;
+	width: 100%;
+	margin-top: 20px;
+}
+#current-contacts .ext-link-block a {
+	display: block;
+	font-size: 13px;
+	text-transform: none;
+}
+#content #map-collapser.on i{
+ background-image: url(/images/layout/symbol_arrow_down_blue.png);
+}
+#content #map-collapser i{
+	background-image: url(/images/layout/symbol_arrow_up_blue.png);
+	width: 18px;
+	height: 8px;
+	background-position: center center;
+	background-repeat: no-repeat;
+	display: inline-block;
+}
+#content #map-collapser.on span:before{
+	content: "показать ";
+	display: inline-block;
+}
+#content #map-collapser span:before{
+	content: "скрыть ";
+	display: inline-block;
+}
+#content #map-contacts-regions h1{
+	font-size: 24px;
+	font-family: 'MS-900';
+	margin: 30px 0;
+	text-transform: uppercase;
+}
+#content #content-contacts .oktet {
+	width: 23%;
+	float: left;
+	font-size: 12px;
+	font-family: 'Helvetica';
+	line-height: 20px;
+}
+#content #content-contacts .oktet + .oktet{
+	margin-left: 10px;
+}
+#content #content-contacts .oktet > div + div {
+	margin-top: 6px;
+}
+#content #content-contacts .oktet > div.main a {
+	font-weight: bold;
+}
+#content #content-contacts .oktet > div.main + div.main {
+	margin-bottom: 10px;
+}
+#content #map-selector{
+	padding-bottom: 10px;
+	position: relative;
+}
+#content #map-selector[rel='all']{
+	background-color: #ececec;
+}
+#content #map-selector[rel='office']{
+	background-color: #0079ef;
+}
+#content #map-selector[rel='base']{
+	background-color: #ff6f02;
+}
+#content #map-selector[rel='shop']{
+	background-color: #810ccb;
+}
+#content #map-selector .arrows{
+	position: absolute;
+	z-index: 9;
+	height: 8px;
+	width: 100%;
+	line-height: 0;
+	margin-top: 10px;
+}
+#content #map-selector .arrows i {
+	width: 18px;
+	height: 8px;
+	background-position: center;
+	background-repeat: no-repeat;
+	display: inline-block;
+	position: absolute;
+	margin-left: -10px;
+	display: none;
+}
+#content #map-selector .arrows i[rel=all]{
+	background-image: url(/images/layout/arrow_down_gray.png);
+}
+#content #map-selector .arrows i:nth-child(1) {
+	left: 13%;
+}
+#content #map-selector .arrows i[rel=office]{
+	background-image: url(/images/layout/arrow_down_blue.png);
+}
+#content #map-selector .arrows i:nth-child(2){
+	left: 38%;
+}
+#content #map-selector .arrows i[rel=base]{
+	background-image: url(/images/layout/arrow_down_orange.png);
+}
+#content #map-selector .arrows i:nth-child(3){
+	left: 63%;
+}
+#content #map-selector .arrows i[rel=shop]{
+	background-image: url(/images/layout/arrow_down_violet.png);
+}
+#content #map-selector .arrows i:nth-child(4){
+	left: 88%;
+}
+#content #map-selector[rel='all'] .arrows i[rel='all'],#content #map-selector[rel='base'] .arrows i[rel='base'],#content #map-selector[rel='shop'] .arrows i[rel='shop'],#content #map-selector[rel='office'] .arrows i[rel='office']{
+	display: block;
+}
+#content #map-selector .arrows i.disabled{
+	display: none !important;
+}
+#content #map-selector .switcher{
+	padding: 15px 0;
+	text-align: center;
+	font-size: 11px;
+	font-family: 'MS-700';
+	line-height: 11px;
+	text-transform: uppercase;
+	color: #fff;
+	width: 25%;
+	float: left;
+	cursor: pointer;
+}
+#content #map-selector .switcher.disabled{
+	cursor: default;
+	background-color: #EFEFEF !important;
+	color: #CCC !important;
+}
+#content #map-selector .switcher[rel=all] {
+	background-color: #ececec;
+	color: #000;
+}
+#content #map-selector .switcher[rel=office] {
+	background-color: #0079ef;
+}
+#content #map-selector .switcher[rel=base] {
+	background-color: #ff6f02;
+}
+#content #map-selector .switcher[rel=shop] {
+	background-color: #810ccb;
+}
+#content #map-contacts .content {
+	background-color: #faf9f2;
+	margin-top: 10px;
+	padding-bottom: 40px;
+}
+#map-contacts .ext-link-block {
+	margin-top: 20px;
+	display: none;
+}
+#map-contacts .ext-link-block a {
+	font-size: 13px;
+	text-transform: none;
+}
+#content #map-contacts .content h2 {
+	height: 43px;
+	padding-left: 100px;
+	font-size: 18px;
+	font-family: 'Helvetica';
+	line-height: 26px;
+	text-transform: uppercase;
+	color: #000;
+	font-weight: bold;
+	background-image: url(/images/layout/ico_vostok_office.png);
+	background-position: left center;
+	background-repeat: no-repeat;
+	padding-top: 17px;
+	border-bottom: 1px solid #e8e5dd;
+}
+#content #map-contacts  .content h2:first-child {
+	/*height: 58px;
+	padding-top: 7px;*/
+}
+#content #map-contacts .content h2.shop{
+	background-image: url(/images/layout/ico_vostok_shop.png);
+}
+#content #map-contacts .content h2.base{
+	background-image: url(/images/layout/ico_vostok_base.png);
+}
+#content #map-contacts .content h2.department{
+	background-image: url(/images/layout/ico_vostok_office.png);
+}
+#content #map-contacts .content clear + h2{
+	margin-top: 45px;
+}
+#content #map-contacts .content article{
+	margin-top: 25px;
+	float: left;
+	width: 45%;
+	padding-left: 4%;
+}
+#content #map-contacts .content article.one {
+	width: 95%;
+}
+#content #map-contacts .content article header {
+	color: #00529c;
+	font-size: 12px;
+	font-family: 'MS-900';
+	line-height: 12px;
+	text-transform: uppercase;
+}
+#content #map-contacts .content article h3 {
+	color: #000;
+	font-size: 12px;
+	font-family: 'MS-900';
+	line-height: 12px;
+	text-transform: uppercase;
+}
+#content #map-contacts .content article .ext {
+	display: none;
+	margin-top: 0;
+	position: relative;
+}
+#content #map-contacts .content article h3{
+	margin-bottom: 3px;
+	margin-top: 10px;
+}
+#content #map-contacts .content article header.dashed > span {
+	border-bottom: 1px dashed;
+	cursor: pointer;
+}
+#content #map-contacts .content article header.dashed + .contacts {
+	display: none;
+}
+#content #map-contacts .content article .contacts > div, #content #map-contacts .content article .ext > div {
+	margin-top: 10px;
+	font-size: 12px;
+	font-family: 'Helvetica';
+	line-height: 20px;
+}
+#content #map-contacts .content article .contacts > div > span, #content #map-contacts .content article .ext > div > span{
+ 	color: #686868;
+	font-size: 10px;
+	text-transform: uppercase;
+}
+#content #map-contacts .content article > .collapser a{
+	color: #ff6f02;
+	font-size: 10px;
+	text-transform: uppercase;
+	text-decoration: none;
+	border-bottom: 1px dashed;
+
+}
+#inner-ext-point h2 {
+	border-bottom: none;
+	padding: 20px 30px;
+	margin: 0;
+	min-height: 38px;
+	color: #686868;
+	font-family: 'MS-900';
+	font-size: 24px;
+
+	opacity: 0.7;
+
+	text-align: center;
+	text-transform: uppercase;
+}
+#inner-ext-point {
+	margin-left: 360px;
+}
+#inner-ext-point .user-content > ul li {
+	clear: inherit;
+}
+#inner-ext-point .user-content > ul {
+	margin: 20px 0;
+}
+#inner-ext-point .more-ext {
+	font-family: 'Helvetica';
+	font-size: 14px;
+	line-height: 24px;
+	color: #252525;
+	margin-bottom: 15px;
+}
+#inner-ext-point .more-ext > div + div {
+	margin-top: 5px;
+}
+#inner-ext-point .more-ext > div > span {
+	font-weight: bold;
+}
+
+#contacts-tabs-line {
+	background-color: #AFAFAF;
+	position: relative;
+	width: 100%;
+	height: 1px;
+	margin-top: -1px;
+	z-index: -1;
+}
+#contacts-tabs {
+	z-index: 3;
+}
+#contacts-tabs > a.active {
+	background: #fff;
+	border-bottom: 1px solid #fff;
+	color: #323232;
+	margin-top: -8px;
+	padding: 14px 20px;
+}
+#contacts-tabs > a:hover {
+	background: #fff;
+	color: #323232;
+}
+#contacts-tabs > a {
+	z-index: 3;
+	background-color: #ECECEC;
+	color: #555;
+	display: inline-block;
+	border-right: 1px solid #AFAFAF;
+	border-left: 1px solid #AFAFAF;
+	border-top: 1px solid #AFAFAF;
+	padding: 8px 14px;
+	text-decoration: none;
+	white-space: nowrap;
+	display: block;
+	float: left;
+	padding: 10px 15px;
+	border-bottom: 1px solid #AFAFAF;
+	font-family: MS-900;
+}
+
+#contacts-tabs > a + a {
+	margin-left: -1px;
+}
+#content-contacts .country-contacts {
+	padding: 15px;
+	display: none;
+	margin-top: -1px;
+}
+#inner-ext-point .user-content  {
+	text-align: center;
+}
+
+#content-contacts-search{
+	margin: 20px 0;
+}
+#search-contacts-inp{
+	border:1px solid #AFAFAF; padding: 14px 20px; width:300px;
+	color: #323232;
+	font-family: MS-900;
+	color: #CCC;
+}
+#search-contacts-inp.active {
+	color: #323232;
+}
+#content-contacts-search > div {
+	position: relative;
+}
+#content-contacts-search > div > ul {
+	position: absolute;
+	border: 1px solid #afafaf;
+	margin-top: -1px;
+	display: none;
+}
+#content-contacts-search > div > ul > li {
+	background-color: rgba( 255, 255, 255, 0.9);
+	padding: 5px 20px;
+	color: #323232;
+	list-style-type: none;
+	margin: 0;
+}
+#content-contacts-search > div > ul > li > a {
+	font-size: 12px;
+	color: #1266B1;
+	line-height: 20px;
+}
+
+
+/* 980 */
+
+._980 #content #map-contacts{
+	width: 60%;
+}
+
+._980 #content #current-contacts{
+	width: 37%;
+	margin-right: 3%;
+}
+._980 #content #content-contacts .oktet {
+	width: 23%;
+}
+._980 #content #content-contacts .oktet + .oktet{
+	margin-left: 2%;
+}
+._980 #content #map-contacts-regions {
+	width: 60%;
+}
+
+/* 768 */
+._768 #inner-ext-point {
+	margin-left: 0px;
+}
+._768 #map-contacts .ext-link-block {
+	display: inline-block;
+}
+._768 #content #map-contacts{
+	width: 100%;
+	float: none;
+}
+._768 #content #content-contacts .sectet {
+	width: 48%;
+	float: left;
+}
+._768 #content #content-contacts .sectet + .sectet{
+	margin-left: 4%;
+}
+._768 #content #content-contacts .sectet .oktet {
+	float: none;
+	width: 100%;
+	padding-top: 6px;
+}
+._768 #content #content-contacts .oktet + .oktet{
+	margin-left: 0;
+}
+
+._768 #content #map-contacts-regions h1 {
+	margin: 30px 0 20px;
+}
+
+._768 #content #current-contacts.point {
+ 	display: none;
+	float: none;
+}
+
+._768 #search-contacts-inp{
+	width: 84%;
+	max-width: 300px;
+}
+
+/* 480 */
+
+._480 #content #map-contacts-regions {
+	width: 100%;
+	float: none;
+}
+
+._480 #content #current-contacts{
+	width: 100%;
+	margin-right: 0;
+	float: none;
+}
+
+._480 #content #content-contacts {
+	width: 100%;
+	float: none;
+
+}
+._480 #content #map-selector{
+	padding-bottom: 2px;
+	position: absolute;
+	/*text-align: center;*/
+	width: 100%;
+	z-index: 9;
+	padding-top: 40px;
+	top: 0;
+}
+._480 #content #map-selector .switcher.active{
+	display: inline-block;
+	/*position: relative;*/
+	position: absolute;
+	top: 0;
+}
+._480 #content #map-selector .switcher.active i{
+	border-left: 1px solid #bdbdbd;
+	height: 40px;
+	position: absolute;
+	right: 0;
+	top: 1px;
+	width: 50px;
+	background-image: url(/images/layout/ico_2arrows.png);
+	background-position: center;
+	background-repeat: no-repeat;
+}
+._480 #content #map-selector .arrows {
+	margin-top: 2px;
+}
+._480 #content #map-selector .switcher{
+	float: none;
+	padding: 15px 4%;
+	text-align: center;
+	width: 92%;
+}
+._480 #content #map-selector .arrows i {
+	left: 50% !important;
+	margin-left: -9px !important;
+}
+._480 #content #map-contacts{
+	padding-top: 45px;
+}
+._480 #content #map-selector .switcher.hide {
+	display: none;
+}
+._480 #content #map-contacts .content article{
+	margin-top: 25px;
+	float: none;
+	width: 100%;
+	padding-left: 0;
+}
+._480 #content #map-selector .switcher[style='visibility: hidden;'] {
+	display: none;
+}
+

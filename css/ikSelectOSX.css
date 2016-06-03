@@ -1,0 +1,113 @@
+.ik_select{
+	font-family: Helvetica, Arial;
+	font-size: 10px;
+	text-transform: uppercase;
+	color: #257ac7;
+}
+.ik_select_link{
+	position: relative;
+	height: 30px;
+	line-height: 30px;
+	padding:0 40px 0 10px;
+	border: 1px solid #257ac7;
+	background-color: white;
+	cursor: pointer;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+.ik_select_link:hover{
+}
+.ik_select_link_text:before{
+	content: '';
+	position: absolute;
+	border-left: 1px solid #257ac7;
+	top: 3px;
+	right: 0;
+	bottom: 3px;
+	width: 29px;
+
+}
+.ik_select_link_text:after{
+	content: '';
+	position: absolute;
+	width: 0;
+	height: 0;
+	right: 10px;
+	top: 50%;
+	margin-top: -2px;
+	border-top: 4px solid #257ac7;
+	border-right: 4px solid transparent;
+	border-left: 4px solid transparent;
+	cursor: pointer;
+}
+.ik_select_link.ik_select_link_opened .ik_select_link_text:before{
+	border-color: white;
+	background-color: #257ac7;
+	top: 0;
+	bottom: 0;
+}
+.ik_select_link.ik_select_link_opened .ik_select_link_text:after{
+	border-top-color: white;
+}
+
+.ik_select_block{
+	top: 31px;
+	font-family: Helvetica, Arial;
+	font-size: 10px;
+	text-transform: uppercase;
+}
+.ik_select_list{
+	background-color: #257ac7;
+	color: white;
+	border: none;
+}
+.ik_select_list li{
+	padding: 10px;
+}
+.ik_select_optgroup_label{
+	padding:0 21px;
+}
+.ik_select_optgroup li{
+	padding-left:42px;
+}
+.ik_select_list li.ik_select_hover{
+	background-color: #ff6f00;
+	color: white;
+}
+.ik_select_link_disabled{
+	box-shadow:none;
+}
+
+.ik_select_filter_wrap{
+	padding:0 4px 4px;
+}
+.ik_select_filter{
+	height:20px;
+	padding:0 5px;
+	border:none;
+	-webkit-box-shadow:inset 0 1px 3px rgba(0,0,0,0.4);
+	-moz-box-shadow   :inset 0 1px 3px rgba(0,0,0,0.4);
+	box-shadow        :inset 0 1px 3px rgba(0,0,0,0.4);
+}
+.ik_select_filter:focus{
+	outline:none;
+}
+
+.ik-form-select .ik_select_link{
+    border-color: #9F9F9F;
+}
+.ik-form-select .ik_select_link_text:before{
+    border-color: #9F9F9F;
+}
+/*
+.ik-form-select .ik_select_link.ik_select_link_opened .ik_select_link_text:before{
+    background-color: #FAF9F2;
+}
+.ik-form-select .ik_select_list{
+    background-color: #FAF9F2;
+    color: #252525;
+}
+.ik-form-select .ik_select_list li.ik_select_hover{
+    background-color: #9F9F9F;
+}
+*/

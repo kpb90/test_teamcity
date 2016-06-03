@@ -1,0 +1,10 @@
+old logo: 
+mysql error: Table 'db_pochtik_4.cms2_eger_actions' doesn't exist
+mysql error: Table 'db_pochtik_4.cms2_eger_actions' doesn't exist
+mysql error: Unknown column 'date' in 'field list'
+mysql error: Unknown column 'date' in 'field list'
+mysql error: Unknown column 'date' in 'field list'
+mysql error: Table 'db_pochtik_4.cms2_land_actions' doesn't exist
+mysql error: Table 'db_pochtik_4.cms2_land_actions' doesn't exist
+mysql error: Table 'db_pochtik_4.cms2_land_actions' doesn't exist
+mysql error: Table 'db_pochtik_4.cms2_land_actions' doesn't exist

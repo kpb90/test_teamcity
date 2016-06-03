@@ -1,0 +1,366 @@
+#content #vostok-contacts-map{
+	height: 500px;
+	padding-top: 10px;
+	border-top: 10px solid #ECECEC;
+
+}
+#content #map-contacts {
+	position: relative;
+	overflow: hidden;
+	padding-bottom: 20px;
+}
+
+
+#content #current-contacts{
+	width: 320px;
+	float: left;
+	margin-right: 20px;
+}
+
+#content #map-selector{
+
+	position: relative;
+	width: 1200px;
+}
+#content #vostok-contacts-map[rel='all']{
+	border-top: 10px solid #ececec;
+}
+#content #vostok-contacts-map[rel='event']{
+	border-top: 10px solid #002f88;
+}
+#content #vostok-contacts-map[rel='production']{
+	border-top: 10px solid #0079ef;
+}
+#content #vostok-contacts-map[rel='shop']{
+	border-top: 10px solid #810ccb;
+}
+#content #vostok-contacts-map[rel='partner']{
+	border-top: 10px solid #ff5d00;
+}
+#content #vostok-contacts-map[rel='affilate']{
+	border-top: 10px solid #19970e;
+}
+#content #map-selector[rel='all']{
+	background-color: #ececec;
+}
+#content #map-selector[rel='event']{
+	background-color: #002f88;
+}
+#content #map-selector[rel='production'] {
+	background-color: #0079ef;
+}
+#content #map-selector[rel='shop'] {
+	background-color: #810ccb;
+}
+#content #map-selector[rel='partner'] {
+	background-color: #ff5d00;
+}
+#content #map-selector[rel='affilate']  {
+	background-color: #19970e;
+}
+#content #map-selector .arrows{
+	position: absolute;
+	z-index: 9;
+	height: 8px;
+	width: 100%;
+	line-height: 0;
+	margin-top: 10px;
+}
+#content #map-selector .arrows i {
+	width: 18px;
+	height: 8px;
+	background-position: center;
+	background-repeat: no-repeat;
+	display: inline-block;
+	position: absolute;
+	display: none;
+}
+#content #map-selector .arrows i[rel=all]{
+	background-image: url(/images/layout/arrow_down_gray.png);
+}
+#content #map-selector .arrows i[rel=production]{
+	background-image: url(/images/layout/arrow_down_blue.png);
+}
+#content #map-selector .arrows i[rel=partner]{
+	background-image: url(/images/layout/arrow_down_orange.png);
+}
+#content #map-selector .arrows i[rel=shop]{
+	background-image: url(/images/layout/arrow_down_violet.png);
+}
+#content #map-selector .arrows i[rel=event]{
+	background-image: url(/images/layout/arrow_down_dblue.png);
+}
+#content #map-selector .arrows i[rel=affilate]{
+	background-image: url(/images/layout/arrow_down_green.png);
+}
+#content #map-selector[rel='all'] .arrows i[rel='all'],#content #map-selector[rel='production'] .arrows i[rel='production'],
+#content #map-selector[rel='shop'] .arrows i[rel='shop'],#content #map-selector[rel='partner'] .arrows i[rel='partner'],
+#content #map-selector[rel='affilate'] .arrows i[rel='affilate'],#content #map-selector[rel='event'] .arrows i[rel='event']
+{
+	display: block;
+}
+#content #map-selector .arrows i.disabled{
+	display: none !important;
+}
+#content #map-selector .switcher{
+	white-space: nowrap;
+	display: inline;
+	height: 40px;
+	text-align: center;
+	font-size: 11px;
+	font-family: 'MS-700';
+	line-height: 11px;
+	text-transform: uppercase;
+	color: #fff;
+	width: 25%;
+	float: left;
+	cursor: pointer;
+	overflow: hidden;
+}
+#content #map-selector .switcher > span{
+	vertical-align: -15px;
+}
+#content #map-selector .switcher i {
+	background-position: center;
+	background-repeat: no-repeat;
+	height: 23px;
+	width: 21px;
+	display: inline-block;
+	vertical-align: -22px;
+	margin-right: 5px;
+}
+#content #map-selector .switcher.disabled{
+	cursor: default;
+	background-color: #EFEFEF !important;
+	color: #CCC !important;
+}
+#content #map-selector .switcher[rel=all] {
+	background-color: #ececec;
+	color: #000;
+	height: 25px;
+	padding-top: 15px;
+}
+#content #map-selector .switcher[rel=partner] {
+	background-color: #ff5d00;
+}
+#content #map-selector .switcher[rel=partner] i {
+  	background-image: url(/images/layout/inworld-ico-partner.png);
+}
+#content #map-selector .switcher[rel=affilate] {
+	background-color: #19970e;
+}
+#content #map-selector .switcher[rel=affilate] i{
+	background-image: url(/images/layout/inworld-ico-aff.png);
+}
+#content #map-selector .switcher[rel=event] {
+	background-color: #002f88;
+}
+#content #map-selector .switcher[rel=event] i {
+	background-image: url(/images/layout/inworld-ico-event.png);
+	width: 8px;
+	height: 8px;
+	vertical-align: -15px;
+}
+#content #map-selector .switcher[rel=production] {
+	background-color: #0079ef;
+}
+#content #map-selector .switcher[rel=production] i{
+	background-image: url(/images/layout/inworld-ico-prod.png);
+}
+#content #map-selector .switcher[rel=shop] {
+	background-color: #810ccb;
+}
+#content #map-selector .switcher[rel=shop] i{
+	background-image: url(/images/layout/inworld-ico-shop.png);
+}
+
+/*.inworld-point-box:before{
+	position: absolute;
+	width: 27px;
+	height: 9px;
+	background-image: url(/images/layout/tooltip-arrow.png);
+	content: "";
+	top: -9px;
+	left: 3px;
+}  */
+.inworld-point-box {
+	font-size: 12px;
+	line-height: 20px;
+	font-family: 'Helvetica';
+	color:#fff;
+	padding: 10px 20px;
+	position: absolute;
+	z-index: 9999;
+	max-width: 300px;
+	background-repeat: no-repeat;
+	background-position: -16px top;
+	box-shadow: -3px -5px 9px -6px #999;
+}
+.inworld-point-box header{
+	font-weight: bold;
+	color: #fff;
+	display: inline-block;
+	line-height: 14px;
+}
+.inworld-point-box .description{
+	margin-top: 7px;
+}
+.inworld-point-box header a{
+	text-decoration: underline !important;
+}
+.inworld-point-box.point1{
+	background-color: #002F88;
+	/*background-image: url(/images/layout/inworld_marker1.png);*/
+}
+.inworld-point-box.point2{
+	background-color: #19970E;
+	/*background-image: url(/images/layout/inworld_marker2.png);*/
+	background-position: -16px top;
+}
+.inworld-point-box.point3{
+	background-color: #810ccb;
+	/*background-image: url(/images/layout/inworld_marker3.png);*/
+	background-position: -15px top;
+}
+.inworld-point-box.point4{
+	background-color: #0079EF;
+	/*background-image: url(/images/layout/inworld_marker4.png);*/
+}
+.inworld-point-box.point5{
+	background-color: #ff5d00;
+	/*background-image: url(/images/layout/inworld_marker5.png);*/
+	background-position: -15px top;
+}
+
+
+
+/* _980 */
+
+._980 #content #vostok-contacts-map{
+	height: 500px;
+	margin: -20px -10% 0;
+}
+
+/* _850 */
+
+._850 #content #vostok-contacts-map{
+	height: 450px;
+	margin: -20px -10% 0;
+}
+
+/* _768 */
+
+._768 #content #vostok-contacts-map{
+	height: 450px;
+	margin: -20px -10% 0;
+}
+
+/* 720 */
+
+._720 #content #vostok-contacts-map{
+	height: 450px;
+	margin: -20px -10% 0;
+}
+
+/* 600 */
+
+._600 #content #vostok-contacts-map{
+	height: 400px;
+	margin: -20px -10% 0;
+}
+
+/* 480 */
+
+._480 #content #vostok-contacts-map{
+	height: 400px;
+	margin: -20px -10% 0;
+}
+
+._480 #content #map-contacts-regions {
+	width: 100%;
+	float: none;
+}
+
+._480 #content #current-contacts{
+	width: 100%;
+	margin-right: 0;
+	float: none;
+}
+
+._480 #content #content-contacts {
+	width: 100%;
+	float: none;
+
+
+}
+._480 #content #map-selector{
+	padding-bottom: 5px;
+	margin-top: 5px;
+	position: absolute;
+	/*text-align: center;*/
+	width: 100%;
+	z-index: 9;
+	padding-top: 40px;
+	top: 0;
+}
+._480 #content #map-selector .switcher.active{
+	display: inline-block;
+	height: 25px;
+	padding-top: 15px;
+	position: absolute;
+	top: 0;
+}
+._480 #content #map-selector .switcher.active i{
+	border-left: 1px solid #bdbdbd;
+	height: 40px;
+	position: absolute;
+	right: 0;
+	top: 1px;
+	width: 50px;
+	background-image: url(/images/layout/ico_2arrows.png);
+	background-position: center;
+	background-repeat: no-repeat;
+}
+._480 #content #map-selector .arrows {
+	margin-top: 0px;
+}
+
+._480 #content #map-selector .switcher.active > span {
+	vertical-align: 0;
+}
+._480 #content #map-selector .switcher{
+	float: none;
+	padding: 0px 4%;
+	text-align: center;
+	width: 92% !important;
+	display: block;
+}
+._480 #content #map-selector .arrows i {
+	left: 50% !important;
+	margin-left: -8px !important;
+	top: 10px;
+}
+._480 #content #map-selector .arrows.open i {
+	top: 5px;
+}
+._480 #content #map-contacts{
+	padding-top: 45px;
+	overflow: visible;
+}
+._480 #content #map-selector .switcher.hide {
+	display: none;
+}
+._480 #content #map-contacts .content article{
+	margin-top: 25px;
+	float: none;
+	width: 100%;
+	padding-left: 0;
+}
+._480 #content #map-selector .switcher[style='visibility: hidden;'] {
+	display: none;
+}
+
+._480 #content #map-selector .switcher[rel=all]:not(.active) {
+	padding-top: 15px;
+}
+

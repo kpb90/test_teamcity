@@ -1,0 +1,467 @@
+#menu, #carlsberg_menu {
+	position: relative;
+	background: #ECECEC;
+	font-family: 'MS-700';
+	text-transform: uppercase;
+	cursor: default;
+}
+#menu .menu, #carlsberg_menu .menu{
+	box-shadow: 0 -5px 18px 0 rgba(0, 0, 0, 0.09) inset;
+	padding: 0 20px;
+	line-height: 40px;
+}
+#menu a, #carlsberg_menu a{
+	text-decoration: none;
+}
+#menu ul,#carlsberg_menu ul{
+	padding: 0;
+	margin: 0;
+	list-style: none;
+	display: none;
+}
+#menu .level0,#carlsberg_menu .level0{
+	text-align: justify;
+	display: block;
+	height: 50px;
+}
+#menu .level0:after,#carlsberg_menu .level0:after{
+	content: '';
+	display: inline-block;
+	width: 100%;
+	height: 0;
+}
+#menu .level0 > li,#carlsberg_menu .level0 > li{
+	margin: 0;
+	position: relative;
+	display: inline-block;
+	color: #00529C;
+   font-size: 14px;
+   line-height: 50px;
+}
+#menu .level0 > li > i,#carlsberg_menu .level0 > li > i{
+	position: absolute;
+	width: 1px;
+	top: 9px;
+	left: -2px;
+	bottom: 0;
+	background-color: #d9d9d9;
+	border-right: 1px solid white;
+}
+#menu .level0 > li.index,#carlsberg_menu .level0 > li.index{
+	display: none;
+}
+#menu .level0 > li.index + li > i,#carlsberg_menu .level0 > li.index + li > i{
+	display: none;
+}
+#menu .level0 > li:hover,#carlsberg_menu .level0 > li:hover{
+	color: #252525;
+}
+#menu .level0 > li.active,#carlsberg_menu .level0 > li.active,
+#menu .level0 > li.opened,#carlsberg_menu .level0 > li.opened{
+	color: #252525;
+}
+#menu .level0 > li.opened:after,#carlsberg_menu .level0 > li.opened:after{
+	content: '';
+	position: absolute;
+	top: 50px;
+	left: 50%;
+	z-index: 17;
+	border: 0 solid transparent;
+	border-top-color: #ddd;
+	transform: 100px;
+	border-width: 7px;
+	margin-left: -7px;
+}
+#menu .level0 > li.active,#carlsberg_menu .level0 > li.active{
+	/*font-family: 'MS-900';*/
+}
+#menu .level0 > li > a,#carlsberg_menu .level0 > li > a,
+#menu .level1 > li > a,#carlsberg_menu .level1 > li > a,
+#menu .level2 > li > a,#carlsberg_menu .level2 > li > a,
+#menu .submenu li > a,#carlsberg_menu .submenu li > a{
+	display: block;
+	height: 100%;
+}
+#menu .submenu,#carlsberg_menu .submenu,
+._600 #menu .level1,._600 #carlsberg_menu .level1{
+	background-color: #00529c;
+	color: white;
+	font-size: 12px;
+	z-index: 1;
+}
+._600 #menu .level1,._600 #carlsberg_menu .level1{
+	overflow: hidden;
+}
+#menu .submenu,#carlsberg_menu .submenu{
+	position: absolute;
+	z-index: 15;
+	width: 100%;
+	transition: opacity .3s linear;
+	height: 0;
+	overflow: hidden;
+}
+#menu .submenu.opened,#carlsberg_menu .submenu.opened{
+	overflow: visible;
+}
+#menu .submenu.freez,#carlsberg_menu .submenu.freez{
+	position: relative;
+	transition: none;
+	-webkit-transition: none; 
+}
+#menu .submenu .level1,#carlsberg_menu .submenu .level1{
+	display: block;
+	text-align: center;
+	white-space: normal;
+}
+#menu .submenu li,#carlsberg_menu .submenu li{
+	display: inline-block;
+	line-height: 39px;
+}
+#menu .submenu li > a,#carlsberg_menu .submenu li > a{
+	padding: 0 15px;
+}
+#menu .submenu li.active,#carlsberg_menu .submenu li.active,
+#menu .submenu li:hover,#carlsberg_menu .submenu li:hover,
+._600 #menu .level1 li.active,._600 #carlsberg_menu .level1 li.active,
+._600 #menu .level1 li:hover,._600 #carlsberg_menu .level1 li:hover,
+._600 #menu .level1 li.opened,._600 #carlsberg_menu .level1 li.opened{
+	color: #b3dafd;
+}
+
+#menu .level2,#carlsberg_menu .level2{
+	position: absolute;
+	background-color: #004483;
+	color: white;
+	padding: 20px;
+	z-index: 20;
+}
+#menu .level2 > li,#carlsberg_menu .level2 > li{
+	display: block;
+	line-height: 30px;
+	white-space: nowrap;
+}
+#menu .level2 > li > a,#carlsberg_menu .level2 > li > a{
+	display: inline;
+	padding: 6px 9px 4px 9px;
+}
+#menu .level2 > li:hover,#carlsberg_menu .level2 > li:hover{
+	color: inherit;
+}
+#menu .level2 > li > a:hover,#carlsberg_menu .level2 > li > a:hover{
+	background-color: #ff6f02;
+}
+#menu .level1 > li,#carlsberg_menu .level1 > li{
+	position: relative;
+}
+#menu .level1 > li:hover .level2,#carlsberg_menu .level1 > li:hover .level2{
+	display: block;
+}
+#menu .level1 > li > i,#carlsberg_menu .level1 > li > i{
+	display: none;
+}
+#menu .level1 > li.has-children > a:after,#carlsberg_menu .level1 > li.has-children > a:after{
+	content: '';
+	display: inline-block;
+	border: 3px solid transparent;
+	border-top-color: white;
+	position: relative;
+	top: 1px;
+	margin-left: 4px;
+}
+#menu .level1 > li.has-children:hover,#carlsberg_menu .level1 > li.has-children:hover{
+	background-color: #004483;
+}
+#menu .level1 > li.has-children:hover > a:after,#carlsberg_menu .level1 > li.has-children:hover > a:after,
+#menu .level1 > li.has-children.active > a:after,#carlsberg_menu .level1 > li.has-children.active > a:after{
+	border-top-color: #b3dafd;
+}
+
+._720 #menu .level0 > li,._720 #carlsberg_menu .level0 > li{
+	font-size: 12px;
+}
+._720 #menu .level0 > li > i,._720 #carlsberg_menu .level0 > li > i{
+	display: none;
+}
+
+#menu .handler,#carlsberg_menu .handler{
+	display: none;
+}
+._600 #menu .handler,._600 #carlsberg_menu .handler{
+	position: relative;
+	display: block;
+	height: 50px;
+	line-height: 49px;
+	text-align: center;
+	box-shadow: 0 -5px 18px 0 rgba(0, 0, 0, 0.09) inset;
+	font-size: 14px;
+	cursor: pointer;
+}
+._600 #menu.opened .handler,._600 #carlsberg_menu.opened .handler{
+	box-shadow: none;
+}
+._600 #menu .handler span,._600 #carlsberg_menu .handler span{
+	display: inline-block;
+	max-width: 380px;
+	text-overflow: ellipsis;
+	overflow: hidden;
+	white-space: nowrap;
+	vertical-align: middle;
+}
+._600 #menu .handler span.index,._600 #carlsberg_menu .handler span.index{
+	color: #6e6e6e;
+	font-size: 11px;
+}
+._480 #menu .handler span,._480 #carlsberg_menu .handler span{
+	max-width: 170px;
+}
+._600 #menu .handler i,._600 #carlsberg_menu .handler i{
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	width: 60px;
+	content: '';
+	display: inline-block;
+	background-image: url(../images/layout/menu-handler.png);
+	background-position: 50% 50%;
+	background-repeat: no-repeat;
+	vertical-align: middle;
+	z-index: 10;
+}
+._600 #menu .handler i:after,._600 #carlsberg_menu .handler i:after{
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	border-left: 1px solid #d9d9d9;
+	border-right: 1px solid white;
+}
+
+._600 #menu .menu,._600 #carlsberg_menu .menu{
+	box-shadow: none;
+	padding: 0;
+}
+._600 #menu .level0,._600 #carlsberg_menu .level0{
+	position: relative;
+	z-index: 1;
+	display: none;
+	height: auto;
+}
+._600 #menu.opened .level0,._600 #carlsberg_menu.opened .level0{
+	margin-top: -50px;
+	display: block;
+}
+._600 #menu .level0:after,._600 #carlsberg_menu .level0:after{
+	display: none;
+}
+._600 #menu .level0 > li.index,._600 #carlsberg_menu .level0 > li.index{
+	display: block;
+	margin-right: 60px;
+	padding-left: 60px;
+	background-color: #ECECEC;
+}
+._600 #menu .level0 > li,._600 #carlsberg_menu .level0 > li{
+	text-align: center;
+	display: block;
+	font-size: 14px;
+	border-bottom: 1px solid #d9d9d9;
+}
+._600 #menu .level0 > li + li,._600 #carlsberg_menu .level0 > li + li{
+	border-top: 1px solid white;
+}
+._600 #menu .level0 > li.has-children > i,._600 #carlsberg_menu .level0 > li.has-children > i{
+	display: block;
+	position: absolute;
+	top: 0;
+	right: 0;
+	left: auto;
+	width: 60px;
+	height: 50px;
+	cursor: pointer;
+	background: none;
+	border: 0;
+}
+._600 #menu .level0 > li.has-children > i:after,._600 #carlsberg_menu .level0 > li.has-children > i:after{
+	content: '';
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	margin: -3px 0 0 -8px;
+	border: 8px solid transparent;
+	border-top-color: #164f9c;
+}
+._600 #menu .level0 > li.has-children.opened > i:after,._600 #carlsberg_menu .level0 > li.has-children.opened > i:after{
+	border-top-color: transparent;
+	border-bottom-color: #252525;
+	margin-top: -13px;
+}
+._600 #menu .level1,._600 #carlsberg_menu .level1{
+	display: block;
+	height: 0;
+}
+._600 #menu .level0 > li > ul > li,._600 #carlsberg_menu .level0 > li > ul > li{
+	line-height: 39px;
+}
+._600 #menu .level0 > li > ul > li > a,._600 #carlsberg_menu .level0 > li > ul > li > a{
+	display: block;
+	height: 40px;
+}
+._600 #menu .level0 > li.opened > ul,._600 #carlsberg_menu .level0 > li.opened > ul{
+	height: auto;
+	padding: 10px 0;
+}
+._600 #menu .level0 > li.opened > a,._600 #carlsberg_menu .level0 > li.opened > a{
+	box-shadow: 0 -5px 18px 0 rgba(0, 0, 0, 0.09) inset;
+}
+._600 #menu li.active > a,._600 #carlsberg_menu li.active > a{
+	font-family: 'MS-900';
+}
+._600 #menu .submenu,._600 #carlsberg_menu .submenu{
+	display: none;
+}
+._600 #menu .level1 > li > a:after,._600 #carlsberg_menu .level1 > li > a:after{
+	display: none;
+}
+._600 #menu .level1 > li.has-children > i,._600 #carlsberg_menu .level1 > li.has-children > i{
+	display: block;
+	position: absolute;
+	top: 0;
+	right: 0;
+	left: auto;
+	width: 60px;
+	height: 40px;
+	cursor: pointer;
+	background: none;
+	border: 0;
+}
+._600 #menu .level1 > li.has-children > i:after,._600 #carlsberg_menu .level1 > li.has-children > i:after{
+	content: '';
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	margin: -2px 0 0 -6px;
+	border: 6px solid transparent;
+	border-top-color: white;
+}
+._600 #menu .level1 > li.has-children.opened > i:after,._600 #carlsberg_menu .level1 > li.has-children.opened > i:after{
+	border-top-color: transparent;
+	border-bottom-color: #b3dafd;
+	margin-top: -10px;
+}
+._600 #menu .level1 > li:hover,._600 #carlsberg_menu .level1 > li:hover{
+	background-color: transparent;
+}
+._600 #menu .level1 > li:hover > ul,._600 #carlsberg_menu .level1 > li:hover > ul{
+	display: none;
+}
+._600 #menu .level1 > li.opened > ul,._600 #carlsberg_menu .level1 > li.opened > ul{
+	display: block;
+}
+._600 #menu .level2,._600 #carlsberg_menu .level2{
+	position: static;
+	padding: 10px 0;
+	height: auto;
+	font-size: 10px;
+	font-family: 'MS-700';
+	line-height: 20px;
+}
+._600 #menu .level2 > li > a,._600 #carlsberg_menu .level2 > li > a{
+	display: block;
+	padding: 0;
+}
+._600 #menu .level2 a:hover,._600 #carlsberg_menu .level2 a:hover{
+	color: white;
+}
+
+#carlsberg_menu.carlsberg .level0 > li {
+	vertical-align: middle;
+	line-height: 14px;
+	text-align:center;
+}
+
+#carlsberg_menu.carlsberg .level0 > li  a, #carlsberg_menu.carlsberg .level0 > li span{
+	font-size: 10px;
+	color:black;
+}
+
+#carlsberg_menu.carlsberg .level0 > li{
+   line-height: 14px !important;
+}
+
+#carlsberg_menu.carlsberg {
+	/*background: url("/design_carlsberg/top_menu_carlsberg.png") repeat scroll 0 0 transparent!important;*/
+	height: 45px!important;
+	padding-top: 1px;
+	box-sizing: border-box;
+}
+
+#carlsberg_menu.carlsberg .menu {
+	/*box-shadow: none;
+	border-bottom: 1px solid #145c3b;*/
+}
+
+#carlsberg_menu.carlsberg .level0 {
+	height:44px;
+}
+
+#carlsberg_menu.carlsberg .level0 > li a.buy_this_item {
+	color:white;
+	margin: 0;
+}
+
+#carlsberg_menu.carlsberg .level0 > li > i {
+	opacity: 0;
+}
+
+#carlsberg_menu.carlsberg .level0 > li.opened:after{
+	content: '';
+	position: absolute;
+	top: 26px;
+	left: 50%;
+	z-index: 17;
+	border: 0 solid transparent;
+	border-top-color: #ddd;
+	transform: 100px;
+	border-width: 7px;
+	margin-left: -7px;
+}
+#carlsberg_menu.carlsberg .level0 > li.spec_after.opened:after {
+	top:34px;
+}
+
+.hard_code_append {
+	position: relative;
+	list-style: none;	
+	cursor: pointer;
+}
+.hard_code_append:hover .hard_code_append_child{
+		opacity:1;
+			height:65px;
+				-webkit-transition: height 0.8s;
+	-moz-transition: height 0.8s;
+	transition: height 0.8s;
+
+}
+.hard_code_append_child {
+	position: absolute;
+	z-index: 1;
+	width: 200px;
+	left: -76px;
+	text-align: center;
+	background-color: #00529c;
+	opacity: 0;
+
+		height:0;
+		overflow: hidden;
+	
+	-moz-transition-delay:1.5s;
+    -o-transition-delay:1.5s;
+    -webkit-transition-delay:1.5s;
+    transition-delay:1.5s;
+    
+}
+
+.hard_code_append_child a {
+	display:block;
+}

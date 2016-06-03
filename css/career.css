@@ -1,0 +1,531 @@
+#content #career-photos {
+	overflow: hidden;
+	width: 100%;
+	height: 234px;
+	margin-bottom: 20px;
+}
+
+#content #career-photos > div {
+	width: 960px;
+	height: 234px;
+	text-align: center;
+}
+
+#content #career-content {
+	float: left;
+	width: 60%;
+	margin-right: 4%;
+	min-height: 1px;
+}
+
+#content #vacancy-list {
+	float: left;
+	width: 36%;
+}
+
+#content #career-ext-content {
+	margin-top: 40px;
+	position: relative;
+}
+
+#content #career-politics article.about {
+	padding-left: 80px;
+}
+
+#content #career-politics {
+	float: left;
+	width: 60%;
+	margin-right: 4%;
+}
+
+#content #career-codex {
+	float: left;
+	width: 36%;
+	margin-top: -40px;
+}
+
+#content #career-codex > div {
+	padding: 5px;
+	text-align: center;
+}
+
+#content #career-codex a {
+	font-size: 12px;
+	font-family: 'MS-700';
+	text-transform: uppercase;
+	color: #257ac7;
+}
+
+#content #vacancy-filter {
+	width: 32%;
+	float: left;
+	min-height: 1px;
+	border-top: 1px solid #f6f6f6;
+	margin-right: 20px;
+}
+
+#content #vacancy-filter .ik_select {
+	width: 100% !important;
+}
+
+#content #vacancy-filter .filter_item {
+	padding: 10px 0;
+}
+
+#content #vacancy-filter .filter_item + .filter_item {
+	border-top: 1px solid #f6f6f6;
+}
+
+#content #vacancy-acc-list h2 {
+	font-size: 16px;
+	font-family: 'MS-900';
+	text-transform: uppercase;
+	line-height: 23px;
+	color: #252525;
+}
+#content #vacancy-acc-list > span {
+	font-size: 12px;
+	font-family: 'Helvetica';
+}
+#content #vacancy-acc-list h3 {
+	font-size: 12px;
+	font-family: 'Helvetica';
+	font-weight: bold;
+	text-transform: uppercase;
+	line-height: 20px;
+	color: #262626;
+}
+
+#content #vacancy-acc-list {
+	background-color: #faf9f2;
+	padding: 10px;
+	width: 63%;
+	float: left;
+}
+
+#content #vacancy-acc-list.one {
+	background-color: #faf9f2;
+	padding: 10px;
+	width: 100%;
+	float: none;
+}
+
+#content #vacancy-acc-list > div {
+	padding: 25px 25px 0;
+}
+
+#content #vacancy-acc-list > div.open {
+	background-color: #ffffff;
+}
+
+#content #vacancy-acc-list > div > h2 {
+	padding-bottom: 20px;
+	border-bottom: 1px solid #efefef;
+}
+
+#content #vacancy-acc-list > div > .description, #vacancy-acc-list > div > .content {
+	color: #686868;
+	font-size: 12px;
+	font-family: 'Helvetica';
+	line-height: 20px;
+}
+
+#content #vacancy-acc-list > div > .content h3 {
+	padding-bottom: 10px;
+	border-bottom: 1px solid #c7c7c7;
+	margin-bottom: 10px;
+	margin-top: 20px;
+}
+
+#content #vacancy-acc-list > div > .content .part1 {
+   	float: left;
+	width: 65%;
+	margin-right: 5%;
+}
+#content #vacancy-acc-list > div > .content .part2 {
+	float: left;
+	width: 30%;
+	margin-top: 30px;
+	line-height: 22px;
+}
+#content #vacancy-acc-list.one > div > .content .part2 {
+	margin-top: 0px;
+}
+#content #vacancy-acc-list > div > .content .part2 > div.gray{
+	background-color: #efebdf;
+	padding: 15px;
+}
+#content #vacancy-acc-list.one > div > .content .part2 > div.gray{
+	padding: 15px 20px;
+}
+#content #vacancy-acc-list.one > div > .content h3 {
+	margin-top: 15px;
+}
+
+#content #vacancy-acc-list > div > .content .part2 h3 {
+	padding-bottom: 10px;
+	border-bottom: 1px solid #a2a2a2;
+	margin-bottom: 10px;
+	margin-top: 20px;
+}
+#content #vacancy-acc-list > div > .content .part2 h3:first-child {
+	margin-top: 0;
+}
+#content #vacancy-acc-list .novacancy  {
+	font-size: 24px;
+}
+#content #vacancy-acc-list > div > .content .part2 .button_mail > span{
+	margin-top: 10px;
+	background-color: #f7f7f7;
+	height: 48px;
+	background-image: url(/images/layout/ico_mail.png);
+	background-position: left center;
+	background-repeat: no-repeat;
+	display: inline-block;
+	line-height: 18px;
+	padding: 12px 0 0 70px;
+	color:#252525;
+	font-size: 14px;
+	font-family: 'MS-900';
+	text-transform: uppercase;
+}
+#content #vacancy-acc-list.one > div > .content .part2 .button_mail > span{
+	height: 48px;
+	padding: 12px 0 0 70px;
+	display: block;
+}
+#content #vacancy-acc-list > div > .content .part2 .button_mail > span > span {
+	font-size: 12px;
+	font-family: 'MS-700';
+	text-transform: uppercase;
+	display: block;
+}
+#content #vacancy-acc-list > div > .content {
+	display: none;
+	padding-top: 20px;
+	padding-bottom: 20px;
+}
+#content #vacancy-acc-list.one > div > .content {
+	display: block;
+	padding-top: 0;
+}
+#content #vacancy-acc-list > div > .content .part2 .button_anketa > span{
+	margin-top: 10px;
+	background-color: #f7f7f7;
+	height: 58px;
+	background-image: url(/images/layout/ico_anketa.png);
+	background-position: left center;
+	background-repeat: no-repeat;
+	display: inline-block;
+	line-height: 18px;
+	padding: 2px 0 0 70px;
+	color:#252525;
+	font-size: 14px;
+	font-family: 'MS-900';
+	text-transform: uppercase;
+}
+#content #vacancy-acc-list.one > div > .content .part2 .button_anketa > span{
+	display: block;
+	height: 48px;
+	padding: 12px 0 0 70px;
+}
+#content #vacancy-acc-list > div > .content .part2 .button_anketa > span > span {
+	font-size: 12px;
+	font-family: 'MS-700';
+	text-transform: uppercase;
+	display: block;
+}
+#content #vacancy-acc-list > div > .content .part2 .buttons a {
+	text-decoration: none;
+}
+#content #vacancy-filter #cancel-filter {
+	position: relative;
+	text-align: center;
+	background-color: #f7f7f7;
+	display: none;
+}
+#content #vacancy-filter #cancel-filter a{
+	text-decoration: none;
+	font-size: 10px;
+	font-family: 'Helvetica';
+	font-weight: bold;
+	text-transform: uppercase;
+	padding: 15px;
+	width: 100%;
+	display: inline-block;
+}
+#content #vacancy-filter .button_send > span{
+	margin-top: 25px;
+	height: 30px;
+	background-image: url(/images/layout/ico_mail_s.png);
+	background-position: left center;
+	background-repeat: no-repeat;
+	display: inline-block;
+	line-height: 18px;
+	padding: 10px 0 0 55px;
+	color:#252525;
+	font-size: 14px;
+	font-family: 'MS-900';
+	text-transform: uppercase;
+}
+#content #vacancy-filter .button_send > span > span {
+	font-size: 12px;
+	font-family: 'MS-700';
+	text-transform: uppercase;
+}
+#content #vacancy-body {
+	position: relative;
+}
+#content #vacancy-filter-collapser{
+	width: 40px;
+	height: 100px;
+	position: absolute;
+	left: -20px;
+	top: -40px;
+	z-index: 10;
+	cursor: pointer;
+	display: none;
+}
+#content #vacancy-filter-collapser > div {
+	background-color: #1266b1;
+	width: 40px;
+	height: 40px;
+	background-image: url(/images/layout/ico_collapse.png);
+	background-position: center center;
+	background-repeat: no-repeat;
+}
+#content #vacancy-filter-collapser > span{
+	background-image: url(/images/layout/podbor.png);
+	background-position: center center;
+	background-repeat: no-repeat;
+	display: inline-block;
+	width: 40px;
+	height: 150px;
+	background-color: #fff;
+}
+#content #vacancy-filter-collapser.active > div{
+	background-color: #ff6f02;
+	background-image: url(/images/layout/ico_collapse_back.png);
+}
+
+#content #vacancy-filter #hide-filter{
+	position: relative;
+	text-align: center;
+	background-color: #faf9f2;
+	display: none;
+	margin-top: 10px;
+}
+#content #vacancy-filter #hide-filter a{
+	text-decoration: none;
+	font-size: 10px;
+	font-family: 'MS-900';
+	text-transform: uppercase;
+	padding: 15px;
+	width: 100%;
+	display: inline-block;
+	color: #ff7b18;
+}
+.ik_select.ik_select_autowidth .ik_select_link {
+	font-size: 12px;
+	font-family: 'Helvetica';
+	font-weight: bold;
+	text-transform: uppercase;
+	color:#000;
+}
+#vacancy-filter-form {
+	opacity: 0.3;
+}
+#vacancy-filter-form.active {
+	opacity: 1;
+}
+
+/* 980 */
+
+._980 #content #career-photos > div > img.third {
+	opacity: 0.3;
+}
+
+/* 850 */
+
+._850 #content header .description.pd {
+	padding: 0;
+}
+
+._850 #content #vacancy-filter{
+	position: absolute;
+	width: 280px;
+	height: auto;
+	z-index: 9;
+	background-color: #ffffff;
+	left: -21px;
+	margin: 0;
+	border: 1px solid #EFEFEF;
+	padding: 10px 10px 10px 65px;
+	display: none;
+	float: none;
+}
+._850 #content #vacancy-filter-collapser {
+	display: block;
+}
+._850 #content #vacancy-acc-list .novacancy  {
+	padding-left: 50px;
+}
+._850 #content #vacancy-acc-list{
+    float: none;
+	width: 100%;
+	min-height: 500px;
+}
+/* 768 */
+._768 #content #career-content {
+	width: 48%;
+	margin-right: 4%;
+}
+
+._768 #content #vacancy-list {
+	float: left;
+	width: 48%;
+}
+
+._768 #content #career-codex {
+	float: none;
+	position: relative;
+	right: 0;
+	top: 0;
+	width: 48%;
+	margin-left: 75px;
+	margin-top: 30px;
+}
+._768 #content #career-codex > div {
+	text-align: left;
+}
+
+._768 #content #career-politics {
+	float: none;
+	width: 100%;
+	margin-right: 0;
+}
+
+/* 600 */
+._600 #content header .description.pd {
+	line-height: 25px;
+	margin-bottom: 20px;
+}
+
+/* 480 */
+._480 #content #career-photos > div > img.second {
+	opacity: 0.3;
+}
+
+._480 #content #career-content {
+	width: 100%;
+	margin-right: 0;
+	float: none;
+}
+
+._480 #content #vacancy-list {
+	width: 100%;
+	margin-right: 0;
+	float: none;
+}
+
+._480 #content #career-codex {
+	width: 100%;
+	float: none;
+	position: absolute;
+	top: -60px;
+}
+
+._480 #content #career-politics {
+	float: none;
+	width: 100%;
+	top: 0;
+}
+
+._480 #content #vacancy-acc-list .novacancy  {
+	display: block;
+	padding: 25px;
+}
+
+._480 #content #career-codex > div {
+	padding: 10px 20px;
+	text-align: center;
+}
+
+._480 #content #career-ext-content {
+	margin-top: 80px;
+}
+
+._480 #content #career-politics article.about {
+	padding-left: 0px;
+}
+
+._480 #content #vacancy-filter{
+	position: relative;
+	width: 100%;
+	height: auto;
+	z-index: 9;
+	background-color: #ffffff;
+	margin: 0;
+	border: none;
+	padding: 10px 0;
+	display: none;
+	border-top: 1px solid #f6f6f6;
+	left: 0;
+}
+._480 #content #vacancy-filter-collapser {
+	display: block;
+	height: 40px;
+	position: relative;
+	width: 190px;
+	top: inherit;
+	margin-bottom: 15px;
+}
+._480 #content #vacancy-filter-collapser > div {
+	float: left;
+	background-image: url(/images/layout/ico_collapse_down.png);
+}
+._480 #content #vacancy-filter-collapser.active > div{
+	background-image: url(/images/layout/ico_collapse_up.png);
+}
+._480 #content #vacancy-filter-collapser > span {
+	display: inline-block;
+	margin:0;
+	width: 150px;
+	height: 40px;
+	background-image: url(/images/layout/podbor2.png);
+	background-position: center center;
+	background-repeat: no-repeat;
+}
+._480 #content #vacancy-acc-list h2{
+	font-size: 14px;
+}
+._480 #content #vacancy-acc-list {
+	  padding: 0;
+}
+._480 #content #vacancy-acc-list > div > .content .part1, ._480 #content #vacancy-acc-list > div > .content .part2 {
+	float: none;
+	width: 100%;
+}
+._480 #content #vacancy-acc-list > div > .content .part2 {
+	margin-top: 10px;
+}
+._480 #content #vacancy-acc-list > div > h2 {
+	padding-bottom: 10px;
+}
+._480 #content #vacancy-acc-list > div {
+	padding: 10px 25px 0;
+}
+._480 #content #vacancy-acc-list > div > .content {
+	padding-bottom: 10px;
+	padding-top: 10px;
+}
+._480 #content #vacancy-filter #hide-filter{
+	display: block;
+}
+._480 #content #vacancy-filter .button_send > span {
+	margin-top: 10px;
+}
+
+._360 #content #vacancy-filter-collapser {
+	left:-10px;
+}

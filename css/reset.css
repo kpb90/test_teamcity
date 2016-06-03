@@ -1,0 +1,58 @@
+*{
+	border: 0;
+	padding: 0;
+	margin: 0;
+	outline: none;
+	font: inherit;
+	font-size: 100%;
+}
+
+html{
+	overflow-y: scroll;
+	font-size: 100%;
+}
+html, body{
+	height: 100%;
+}
+body{
+	line-height: 1;
+	font-weight: normal;
+}
+
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+
+a{
+	color: inherit;
+}
+
+a:hover{
+	text-decoration: none;
+}
+
+clear{
+	clear: both;
+	display: block;
+	height: 0;
+	overflow: hidden;
+}
+clear.left{
+	clear: left;
+}
+clear.right{
+	clear: left;
+}
+
+clear.safely{
+	clear: none;
+	width: 100%;
+}
+
+table{
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+
