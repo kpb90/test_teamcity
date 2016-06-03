@@ -158,11 +158,20 @@ class OrderManager extends DBAccessor {
 			$email_manager = $prev_info_order ['manager_email'];
 			$email = $prev_info_order ['user_email'];
 			$comment = $this->getString ('comment_to_status');
-			$subj = ($comment ? 'Обратите внимание, есть комментарий! ' : '') . "Изменение статуса заявки №{$id_order}";
+
+			if ($prev_info_order['status_MVS_id']==$status_MVS_id&&$prev_info_order['status_OM_id']==$status_OM_id&&$comment) {
+				$subj = "Появился комментарий к заявки №{$id_order}";	
+				$actionHistory = 'user_add_comment';
+			} else {
+				$subj = ($comment ? 'Обратите внимание, есть комментарий! ' : '') . "Изменение статуса заявки №{$id_order}";	
+				$actionHistory = 'user_change_status';
+			}
+			
+
 
 			$opt = array ('type_query'=>'execute', 
 						 'query' => $query , 
-						 'action_history' => 'user_change_status', 
+						 'action_history' => $actionHistory, 
 						 'comment_to_status' => $comment,
 						 'prev_info_order' => $prev_info_order, 
 						 'price' => $price, 

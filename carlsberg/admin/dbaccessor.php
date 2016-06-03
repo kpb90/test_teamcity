@@ -131,7 +131,16 @@ class DBAccessor {
 									<a target = '_blank' href = 'see_text.php?id=$old_id_text'>Предыдущая версия текста заявки</a><br/>
 									<a target = '_blank' href = 'see_text.php?id=$new_id_text'>Текущая версия текста заявки</a><br/>";
 				break;
-				
+				case 'user_add_comment':
+					$date_change_order = $opts['date_change_order'];
+					$str_change_status_for_letter = $str_change_status = $opts['comment_to_status'] ? "<b>Комментарии: </b> {$opts['comment_to_status']}<br/>":'';
+					$str_change_status_for_letter .=  "<b>Менеджер: </b> {$_SESSION['auto_user']['name']} (<a href = \"mailto:{$_SESSION['auto_user']['email']}\">{$_SESSION['auto_user']['email']}</a>)<br/>";
+					$str_change_status_for_letter .= "<hr>{$opts['text_order']}";
+					$history_log = "<br> {$_SESSION['auto_user']['name']} <a href = \"mailto:{$_SESSION['auto_user']['email']}\">{$_SESSION['auto_user']['email']}</a> ({$_SESSION['auto_user']['factory']}) изменил данные заявки №{$id_order}:
+										<br> Дата изменения: {$date_change_order} <br>
+										{$str_change_status}";	
+
+				break;
 				case 'user_change_status':
 					$data_MVS_store = array (ORDER_RECEIVED_IN_VOSTOK=>'Получен в Восток Сервис', ORDER_COMPILED => 'Скомплентован', ORDER_SEND => 'Отправлен', PARTIALLY_SENT => 'Отправлен частично');
 					$data_OM_store = array (ORDER_REJECTED => 'Отклонен', ORDER_APPROVED =>'Одобрен', ORDER_GOODS_RECEIVED =>'Товар получен', ORDER_GOODS_RECEIVED_NOT_FULL => 'Товар получен не в полном объеме',ORDER_SENT_REQUEST_TO_SPARE_MANAGER => 'Запрос отправлен запасному менеджеру');
