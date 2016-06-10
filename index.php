@@ -4,7 +4,7 @@
   ini_set('display_errors','Off');
   include_once "carlsberg_function.php";
         //if ($_SERVER['REQUEST_HOST'] == 'vostok.spb.ru')
-
+	//qqq
         if (strpos ($_SERVER['REQUEST_URI'],'/catalog')===0 || $_SERVER['REQUEST_URI'] == '/specodezhda.php')
         {
 
